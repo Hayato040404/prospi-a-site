@@ -99,7 +99,7 @@ header h1:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 2rem;
@@ -118,7 +118,7 @@ main {
     padding: 3rem;
     border-radius: 10px;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hero h2 {
@@ -203,6 +203,49 @@ footer {
     padding: 1.5rem;
     margin-top: 2rem;
 }
+/* ヒーローセクションのスタイル：画像をレスポンシブ対応に */
+.hero {
+    background: linear-gradient(135deg, #00a3b9, #007a8c);
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    overflow: hidden; /* 画像がコンテナからはみ出さないように */
+}
+
+.hero img {
+    width: 100%; /* コンテナ幅に合わせる */
+    max-width: 800px; /* 最大幅を制限 */
+    height: auto; /* アスペクト比を維持 */
+    object-fit: cover; /* 画像がコンテナに収まるよう調整 */
+    border-radius: 8px; /* 角丸でモダンな印象 */
+    display: block; /* 余白を防ぐ */
+    margin: 0 auto; /* 中央揃え */
+}
+
+/* レスポンシブデザイン：モバイルとタブレット向け調整 */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero img {
+        max-width: 100%; /* モバイルでは幅をフルに */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.5rem;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
@@ -249,5 +292,75 @@ footer {
 
     .article-card h3 {
         font-size: 1.4rem;
+    }
+}
+
+/* 汎用的な画像スタイル：どのセクションでも使用可能 */
+.responsive-img {
+    width: 100%; /* コンテナ幅に合わせる */
+    max-width: 600px; /* 最大幅を制限（必要に応じて変更可能） */
+    height: auto; /* アスペクト比を維持 */
+    object-fit: cover; /* 画像がコンテナにフィット */
+    border-radius: 8px; /* 角丸でGame8風のモダンな印象 */
+    display: block; /* 余白を防ぐ */
+    margin: 0 auto 1rem; /* 中央揃え＋下部マージン */
+    /* 重要：SEOとアクセシビリティのため、画像には具体的なalt属性を必ず設定 */
+}
+
+/* 記事カード内の画像 */
+.article-card img {
+    width: 100%;
+    max-width: 300px; /* 記事内では小さめに */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* サイドバー内の画像 */
+aside img {
+    width: 100%;
+    max-width: 200px; /* サイドバーではコンパクトに */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* フッター内の画像（例：ロゴ） */
+footer img {
+    width: 100%;
+    max-width: 150px; /* ロゴは小さめに */
+    height: auto;
+    object-fit: contain; /* ロゴはトリミングせず表示 */
+    margin: 0.5rem auto;
+}
+
+/* レスポンシブデザイン：画像のモバイル・タブレット対応 */
+@media (max-width: 768px) {
+    .article-card img {
+        max-width: 250px;
+    }
+
+    aside img {
+        max-width: 150px;
+    }
+
+    footer img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-card img {
+        max-width: 200px;
+    }
+
+    aside img {
+        max-width: 120px;
+    }
+
+    footer img {
+        max-width: 100px;
     }
 }
