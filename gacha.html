@@ -3,76 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ガチャ攻略 | プロ野球スピリッツA 攻略サイト</title>
-    <meta name="description" content="プロ野球スピリッツAの最新ガチャ情報と攻略法！当たり選手や引き時のコツを徹底解説。">
-    <meta name="keywords" content="プロ野球スピリッツA, ガチャ, 攻略, 当たり選手, プロスピ, TS">
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ガチャ攻略",
-        "url": "https://purosupi-a.f5.si/gacha.html",
-        "description": "プロ野球スピリッツAのガチャ攻略情報を提供。",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "プロスピ 攻略サイト",
-            "url": "https://purosupi-a.f5.si"
-        }
-    }
-    </script>
+    <meta name="description" content="プロスピAのガチャ情報を詳しく解説。最新ガチャの確率、おすすめの引き時、リセマラ情報まで完全網羅。">
+    <meta name="keywords" content="プロスピ,ガチャ,確率,リセマラ,エナジー,おすすめ">
+    
+    <title>ガチャ情報 - プロスピA攻略サイト</title>
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>ガチャ攻略</h1>
-            <button class="hamburger" aria-label="メニューを開く">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="gacha.html">ガチャ攻略</a></li>
-                    <li><a href="players.html">選手評価</a></li>
-                    <li><a href="events.html">イベント攻略</a></li>
-                    <li><a href="beginner.html">初心者ガイド</a></li>
-                </ul>
-            </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>プロスピA攻略</h1>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">ホーム</a></li>
+                        <li><a href="gacha.html" class="nav-link active">ガチャ情報</a></li>
+                        <li><a href="players.html" class="nav-link">選手評価</a></li>
+                        <li><a href="events.html" class="nav-link">イベント</a></li>
+                        <li><a href="guides.html" class="nav-link">攻略ガイド</a></li>
+                        <li><a href="beginner.html" class="nav-link">初心者向け</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile" id="mobileNav">
+            <ul class="nav-mobile-list">
+                <li><a href="index.html" class="nav-mobile-link">ホーム</a></li>
+                <li><a href="gacha.html" class="nav-mobile-link">ガチャ情報</a></li>
+                <li><a href="players.html" class="nav-mobile-link">選手評価</a></li>
+                <li><a href="events.html" class="nav-mobile-link">イベント</a></li>
+                <li><a href="guides.html" class="nav-mobile-link">攻略ガイド</a></li>
+                <li><a href="beginner.html" class="nav-mobile-link">初心者向け</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <main>
-            <section>
-                <h2>最新ガチャ攻略</h2>
-                <div class="article-card">
-                    <h3>タイムスリップ第2弾ガチャ評価</h3>
-                    <p>2025シーズン1の目玉ガチャ！小久保裕紀（Sランク）はパワーAで先発ローテに最適。30連でSランク確定を狙おう。</p>
-                </div>
-                <div class="article-card">
-                    <h3>ガチャの引き時</h3>
-                    <p>エナジーを節約し、Sランク確率UP期間を狙うのがコツ！イベント連動ガチャも要チェック。</p>
-                </div>
-            </section>
-        </main>
-
-        <aside>
-            <h3>関連リンク</h3>
-            <ul>
-                <li><a href="players.html">選手評価：小久保裕紀</a></li>
-                <li><a href="events.html">ガチャ連動イベント</a></li>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">ホーム</a></li>
+                <li>ガチャ情報</li>
             </ul>
-        </aside>
-    </div>
+        </div>
+    </nav>
 
-    <footer>
-        <p>© 2025 プロスピ 攻略サイト. All Rights Reserved.</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">ガチャ情報</h1>
+            <p class="page-subtitle">最新のガチャ情報と確率、効率的な引き方を詳しく解説</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Main Content Area -->
+                <div class="main-content">
+                    <!-- Current Gacha -->
+                    <section class="section current-gacha">
+                        <div class="section-header">
+                            <h2 class="section-title">🎰 開催中のガチャ</h2>
+                            <span class="gacha-period">2025年6月4日 〜 6月11日</span>
+                        </div>
+                        
+                        <div class="gacha-banner">
+                            <img src="/picture/gacha-ex.png?height=300&width=800" alt="EX第二弾">
+                            <div class="gacha-info-overlay">
+                                <h3>エキサイティングプレイヤー第二弾</h3>
+                                <p>豪華選手が勢揃い！</p>
+                            </div>
+                        </div>
+
+                        <div class="gacha-details">
+                            <div class="gacha-info-grid">
+                                <div class="info-card">
+                                    <h4>🎯 排出確率</h4>
+                                    <ul class="probability-list">
+                                        <li class="rank-s">
+                                            <span>Sランク選手</span>
+                                            <span>2.5%</span>
+                                        </li>
+                                        <li class="rank-a">
+                                            <span>Aランク選手</span>
+                                            <span>15.0%</span>
+                                        </li>
+                                        <li class="rank-b">
+                                            <span>Bランク選手</span>
+                                            <span>80.0%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-card">
+                                    <h4>💎 必要エナジー</h4>
+                                    <ul class="energy-list">
+                                        <li>
+                                            <span>単発ガチャ</span>
+                                            <span>25エナジー</span>
+                                        </li>
+                                        <li>
+                                            <span>10連ガチャ</span>
+                                            <span>250エナジー</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="info-card">
+                                    <h4>🎁 特典情報</h4>
+                                    <ul class="bonus-list">
+                                        <li>
+                                            <span>10連ガチャ</span>
+                                            <span>Aランク以上確定</span>
+                                        </li>
+                                        <li>
+                                            <span>初回限定　なし</span>
+                                            <span></span>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <span>30連でエキサイティングプレイヤー<strong>確定</strong>・60連で<strong>自チームエキサイティングプレイヤー確定!!</strong></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Featured Players -->
+                    <section class="section featured-players">
+                        <h2 class="section-title">⭐ ピックアップ選手</h2>
+                        <div class="players-grid">
+                            <div class="player-card">
+                                <div class="player-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="山田太郎">
+                                    <span class="player-rank rank-s">S</span>
+                                </div>
+                                <div class="player-info">
+                                    <h3 class="player-name">山田 太郎</h3>
+                                    <p class="player-team">東京ヤクルトスワローズ</p>
+                                    <p class="player-position">内野手</p>
+                                    <div class="player-stats">
+                                        <div class="stat-row">
+                                            <span>ミート</span>
+                                            <span class="stat-value rank-a">A (85)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>パワー</span>
+                                            <span class="stat-value rank-s">S (92)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>走力</span>
+                                            <span class="stat-value rank-b">B (78)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>守備</span>
+                                            <span class="stat-value rank-a">A (88)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="player-card">
+                                <div class="player-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="佐藤次郎">
+                                    <span class="player-rank rank-s">S</span>
+                                </div>
+                                <div class="player-info">
+                                    <h3 class="player-name">佐藤 次郎</h3>
+                                    <p class="player-team">読売ジャイアンツ</p>
+                                    <p class="player-position">投手</p>
+                                    <div class="player-stats">
+                                        <div class="stat-row">
+                                            <span>球速</span>
+                                            <span class="stat-value rank-s">S (95)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>制球</span>
+                                            <span class="stat-value rank-a">A (87)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>スタミナ</span>
+                                            <span class="stat-value rank-a">A (89)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>変化球</span>
+                                            <span class="stat-value rank-s">S (91)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="player-card">
+                                <div class="player-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="田中三郎">
+                                    <span class="player-rank rank-s">S</span>
+                                </div>
+                                <div class="player-info">
+                                    <h3 class="player-name">田中 三郎</h3>
+                                    <p class="player-team">福岡ソフトバンクホークス</p>
+                                    <p class="player-position">外野手</p>
+                                    <div class="player-stats">
+                                        <div class="stat-row">
+                                            <span>ミート</span>
+                                            <span class="stat-value rank-s">S (93)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>パワー</span>
+                                            <span class="stat-value rank-a">A (86)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>走力</span>
+                                            <span class="stat-value rank-s">S (94)</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>守備</span>
+                                            <span class="stat-value rank-a">A (87)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Gacha Tips -->
+                    <section class="section gacha-tips">
+                        <h2 class="section-title">💡 ガチャを引く前に知っておきたいコツ</h2>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <div class="tip-icon">🎯</div>
+                                <h4>引き時の見極め</h4>
+                                <p>ピックアップ選手が自分のチームに必要かどうかを慎重に判断しましょう。特に、現在の主力選手との比較が重要です。</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">📊</div>
+                                <h4>引くなら60連までがオススメ</h4>
+                                <p>30連で欲しい選手を逃すより、<strong>確実に欲しい選手を60連で</strong>取ることが大事です。その時は、オーダーと相談を。</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">🎁</div>
+                                <h4>無料配布の活用</h4>
+                                <p>今回は、無料配布があります。欲しい選手を無料で引き当てられなったときにガチャを引きましょう。</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">⏰</div>
+                                <h4>イベント連動</h4>
+                                <p>イベントと連動したガチャは、限界突破の素材がもらえることがあります。必ず欲しい選手をAランク選択契約書で取りましょう。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Related Articles -->
+                    <section class="section related-articles">
+                        <h2 class="section-title">📚 関連記事</h2>
+                        <div class="article-grid">
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=120&width=200" alt="リセマラガイド">
+                                </div>
+                                <div class="article-content">
+                                    <h3><a href="#">リセマラ当たりランキング【最新版】</a></h3>
+                                    <p>効率的なリセマラの方法と狙うべき選手について詳しく解説します。</p>
+                                    <span class="article-date">2025年6月5日</span>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=120&width=200" alt="エナジー集め">
+                                </div>
+                                <div class="article-content">
+                                    <h3><a href="#">効率的なエナジー集めの方法</a></h3>
+                                    <p>無課金でもエナジーを効率よく集める方法を紹介します。</p>
+                                    <span class="article-date">2025年6月5日</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Quick Info -->
+                    <div class="widget quick-info-widget">
+                        <h3 class="widget-title">⚡ クイック情報</h3>
+                        <div class="quick-info">
+                            <div class="info-item">
+                                <span class="info-label">現在のガチャ</span>
+                                <span class="info-value">エキサイティングプレイヤー第二弾</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">終了まで</span>
+                                <span class="info-value">6日</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">おすすめ度</span>
+                                <span class="info-value">★★★★☆</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gacha History -->
+                    <div class="widget gacha-history-widget">
+                        <h3 class="widget-title">📅 過去のガチャ</h3>
+                        <ul class="gacha-history-list">
+                            <li><a href="#">年末年始ガチャ</a> <span class="date">12/25-1/10</span></li>
+                            <li><a href="#">クリスマスガチャ</a> <span class="date">12/15-12/25</span></li>
+                            <li><a href="#">???ガチャ</a> <span class="date">12/1-12/15</span></li>
+                            <li><a href="#">???ガチャ</a> <span class="date">11/15-11/30</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Calculator -->
+                    <div class="widget calculator-widget">
+                        <h3 class="widget-title">🧮 ガチャ計算機</h3>
+                        <div class="calculator">
+                            <div class="calc-input">
+                                <label>引く回数:</label>
+                                <input type="number" id="gachaCount" value="10" min="1">
+                            </div>
+                            <div class="calc-result">
+                                <p>必要エナジー: <span id="totalEnergy">250</span></p>
+                                <p>Sランク期待値: <span id="expectedS">0.5</span>体</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="widget ad-widget">
+                        <h3 class="widget-title">📢 広告</h3>
+                        <div class="ad-space">
+                            <p>広告スペース</p>
+                            <!-- admax -->
+<script src="https://adm.shinobi.jp/s/9f7c5790f90bc5c18ae58819a422f5af"></script>
+<!-- admax -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>サイト情報</h4>
+                    <ul>
+                        <li><a href="about.html">サイトについて</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="sitemap.html">サイトマップ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>攻略情報</h4>
+                    <ul>
+                        <li><a href="gacha.html">ガチャ情報</a></li>
+                        <li><a href="players.html">選手評価</a></li>
+                        <li><a href="events.html">イベント攻略</a></li>
+                        <li><a href="guides.html">攻略ガイド</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>初心者向け</h4>
+                    <ul>
+                        <li><a href="beginner.html">始め方ガイド</a></li>
+                        <li><a href="reroll.html">リセマラ情報</a></li>
+                        <li><a href="team-building.html">チーム編成</a></li>
+                        <li><a href="tips.html">攻略のコツ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SNS</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">RSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 プロスピA攻略サイト. All rights reserved.</p>
+                <p><small>※このサイトは個人が運営するファンサイトです。公式とは一切関係ありません。</small></p>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
