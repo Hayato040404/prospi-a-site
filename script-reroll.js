@@ -148,7 +148,7 @@ function updateRerollSuitability() {
     const date = now.getDate();
     
     // 仮の適正度計算（実際のアプリでは、イベント情報やガチャ情報に基づいて計算）
-    let suitability = 90; // デフォルト値
+    let suitability = 40; // デフォルト値
     
 
     
