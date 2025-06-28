@@ -3,76 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>初心者ガイド | プロ野球スピリッツA 攻略サイト</title>
-    <meta name="description" content="プロ野球スピリッツAの初心者向けガイド！基本操作から序盤の効率的な進め方を解説。">
-    <meta name="keywords" content="プロ野球スピリッツA, 初心者, ガイド, 基本操作, プロスピ">
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "初心者ガイド",
-        "url": "https://purosupi-a.f5.si/beginner.html",
-        "description": "プロ野球スピリッツAの初心者向けガイド情報を提供。",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "プロスピ 攻略サイト",
-            "url": "https://purosupi-a.f5.si"
-        }
-    }
-    </script>
+    <meta name="description" content="プロスピA初心者向けガイド。基本操作から効率的な進め方、チーム編成のコツまで詳しく解説。">
+    <meta name="keywords" content="プロスピ,初心者,ガイド,基本操作,チーム編成,攻略">
+    
+    <title>初心者ガイド - プロスピA攻略サイト</title>
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>初心者ガイド</h1>
-            <button class="hamburger" aria-label="メニューを開く">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="gacha.html">ガチャ攻略</a></li>
-                    <li><a href="players.html">選手評価</a></li>
-                    <li><a href="events.html">イベント攻略</a></li>
-                    <li><a href="beginner.html">初心者ガイド</a></li>
-                </ul>
-            </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>プロスピA攻略</h1>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">ホーム</a></li>
+                        <li><a href="gacha.html" class="nav-link">ガチャ情報</a></li>
+                        <li><a href="players.html" class="nav-link">選手評価</a></li>
+                        <li><a href="events.html" class="nav-link">イベント</a></li>
+                        <li><a href="guides.html" class="nav-link">攻略ガイド</a></li>
+                        <li><a href="beginner.html" class="nav-link active">初心者向け</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile" id="mobileNav">
+            <ul class="nav-mobile-list">
+                <li><a href="index.html" class="nav-mobile-link">ホーム</a></li>
+                <li><a href="gacha.html" class="nav-mobile-link">ガチャ情報</a></li>
+                <li><a href="players.html" class="nav-mobile-link">選手評価</a></li>
+                <li><a href="events.html" class="nav-mobile-link">イベント</a></li>
+                <li><a href="guides.html" class="nav-mobile-link">攻略ガイド</a></li>
+                <li><a href="beginner.html" class="nav-mobile-link">初心者向け</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <main>
-            <section>
-                <h2>初心者向けガイド</h2>
-                <div class="article-card">
-                    <h3>ゲームの基本操作</h3>
-                    <p>Vロードではスタミナ管理が重要。序盤はオートプレイを活用して育成。</p>
-                </div>
-                <div class="article-card">
-                    <h3>エナジーの使い方</h3>
-                    <p>ガチャよりイベント報酬を優先。ログインボーナスでコツコツ貯めよう。</p>
-                </div>
-            </section>
-        </main>
-
-        <aside>
-            <h3>関連リンク</h3>
-            <ul>
-                <li><a href="gacha.html">初心者向けガチャ解説</a></li>
-                <li><a href="players.html">おすすめ選手</a></li>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">ホーム</a></li>
+                <li>初心者ガイド</li>
             </ul>
-        </aside>
-    </div>
+        </div>
+    </nav>
 
-    <footer>
-        <p>© 2025 プロスピ 攻略サイト. All Rights Reserved.</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">初心者ガイド</h1>
+            <p class="page-subtitle">プロスピAの基本から効率的な進め方まで完全解説</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Main Content Area -->
+                <div class="main-content">
+                    <!-- Getting Started -->
+                    <section class="section getting-started">
+                        <h2 class="section-title">🚀 プロスピAを始めよう</h2>
+                        <div class="alert">
+                            <div class="alert-icon">💡</div>
+                            <div class="alert-content">
+                                <strong>初心者の方へ</strong>
+                                <p>プロスピAは奥が深いゲームですが、基本を押さえれば誰でも楽しめます。このガイドで効率的にスタートしましょう！</p>
+                            </div>
+                        </div>
+
+                        <div class="gacha-info-grid">
+                            <div class="info-card">
+                                <h4>🎮 基本操作</h4>
+                                <ul class="probability-list">
+                                    <li>
+                                        <span>Vロード</span>
+                                        <span>選手育成の基本</span>
+                                    </li>
+                                    <li>
+                                        <span>オートプレイ</span>
+                                        <span>序盤は積極活用</span>
+                                    </li>
+                                    <li>
+                                        <span>スタミナ管理</span>
+                                        <span>計画的に消費</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="info-card">
+                                <h4>💎 エナジーの使い方</h4>
+                                <ul class="energy-list">
+                                    <li>
+                                        <span>ガチャより報酬優先</span>
+                                        <span>イベント重視</span>
+                                    </li>
+                                    <li>
+                                        <span>ログインボーナス</span>
+                                        <span>毎日必ずチェック</span>
+                                    </li>
+                                    <li>
+                                        <span>無料ガチャ</span>
+                                        <span>忘れずに引く</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="info-card">
+                                <h4>⭐ 選手育成のコツ</h4>
+                                <ul class="bonus-list">
+                                    <li>
+                                        <span>特訓</span>
+                                        <span>能力値アップ</span>
+                                    </li>
+                                    <li>
+                                        <span>限界突破</span>
+                                        <span>レベル上限解放</span>
+                                    </li>
+                                    <li>
+                                        <span>称号</span>
+                                        <span>特殊能力付与</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Step by Step Guide -->
+                    <section class="section step-guide">
+                        <h2 class="section-title">📋 序盤の進め方（ステップ別）</h2>
+                        <div class="article-grid">
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=150&width=250" alt="ステップ1">
+                                </div>
+                                <div class="article-content">
+                                    <h3>ステップ1：チュートリアル完了</h3>
+                                    <p>まずはチュートリアルを完了しましょう。基本操作を覚えながら、初回ガチャでSランク選手を獲得できます。</p>
+                                    <p><strong>重要：</strong>スタートダッシュガチャでSランク確定！</p>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=150&width=250" alt="ステップ2">
+                                </div>
+                                <div class="article-content">
+                                    <h3>ステップ2：Vロードを進める</h3>
+                                    <p>Vロードではスタミナ管理が重要。序盤はオートプレイを活用して効率よく育成を進めましょう。</p>
+                                    <p><strong>コツ：</strong>スタミナが満タンにならないよう定期的にプレイ</p>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=150&width=250" alt="ステップ3">
+                                </div>
+                                <div class="article-content">
+                                    <h3>ステップ3：チーム編成</h3>
+                                    <p>手持ちの選手でバランスの良いチームを編成。ポジション適性と能力値を考慮して配置しましょう。</p>
+                                    <p><strong>ポイント：</strong>打順とポジションの最適化が重要</p>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=150&width=250" alt="ステップ4">
+                                </div>
+                                <div class="article-content">
+                                    <h3>ステップ4：イベント参加</h3>
+                                    <p>開催中のイベントに積極的に参加。豊富な報酬でチーム強化を図りましょう。</p>
+                                    <p><strong>おすすめ：</strong>累計報酬を狙って確実に回収</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Beginner Tips -->
+                    <section class="section beginner-tips">
+                        <h2 class="section-title">💡 初心者が知っておくべきコツ</h2>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <div class="tip-icon">⚡</div>
+                                <h4>エナジーの節約術</h4>
+                                <p>序盤はガチャよりもイベント報酬を優先しましょう。ログインボーナスや無料ガチャでコツコツ貯めることが重要です。</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">🎯</div>
+                                <h4>効率的な育成方法</h4>
+                                <p>Vロードでは特訓素材を集めながら選手を育成。オートプレイを活用して時間を節約しつつ、確実に成長させましょう。</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">🏆</div>
+                                <h4>チーム編成の基本</h4>
+                                <p>ポジション適性を重視し、バランスの良いチームを作りましょう。攻撃力だけでなく守備力も考慮することが大切です。</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">📈</div>
+                                <h4>長期的な目標設定</h4>
+                                <p>短期的な成果にとらわれず、長期的な視点でチーム強化を進めましょう。計画的な育成が成功の鍵です。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Common Mistakes -->
+                    <section class="section common-mistakes">
+                        <h2 class="section-title">⚠️ 初心者がやりがちな失敗</h2>
+                        <div class="article-grid">
+                            <article class="article-card">
+                                <div class="article-content">
+                                    <h3>❌ エナジーの無駄遣い</h3>
+                                    <p>序盤からガチャを引きすぎると、後でエナジー不足に陥ります。イベント報酬を優先して、計画的に使いましょう。</p>
+                                    <p><strong>対策：</strong>月間のエナジー収支を把握する</p>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-content">
+                                    <h3>❌ スタミナの放置</h3>
+                                    <p>スタミナが満タンの状態で放置すると、回復分が無駄になります。定期的にチェックして効率よく消費しましょう。</p>
+                                    <p><strong>対策：</strong>アラーム設定やオートプレイ活用</p>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-content">
+                                    <h3>❌ 適当なチーム編成</h3>
+                                    <p>能力値だけを見てチーム編成すると、実戦で力を発揮できません。ポジション適性や打順を考慮しましょう。</p>
+                                    <p><strong>対策：</strong>編成シミュレーターの活用</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Related Articles -->
+                    <section class="section related-articles">
+                        <h2 class="section-title">📚 関連記事</h2>
+                        <div class="article-grid">
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=120&width=200" alt="リセマラガイド">
+                                </div>
+                                <div class="article-content">
+                                    <h3><a href="reroll.html">リセマラ完全ガイド</a></h3>
+                                    <p>効率的なリセマラの方法と狙うべき選手について詳しく解説します。</p>
+                                    <span class="article-date">2025年6月14日</span>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/placeholder.svg?height=120&width=200" alt="チーム編成">
+                                </div>
+                                <div class="article-content">
+                                    <h3><a href="#">初心者向けチーム編成術</a></h3>
+                                    <p>限られた選手でも効果的なチーム編成を行うコツを解説します。</p>
+                                    <span class="article-date">2025年6月12日</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Quick Info -->
+                    <div class="widget quick-info-widget">
+                        <h3 class="widget-title">⚡ 初心者チェックリスト</h3>
+                        <div class="quick-info">
+                            <div class="info-item">
+                                <span class="info-label">チュートリアル</span>
+                                <span class="info-value">✅ 完了</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">スタートダッシュガチャ</span>
+                                <span class="info-value">✅ 引く</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">初回チーム編成</span>
+                                <span class="info-value">📝 要確認</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beginner Resources -->
+                    <div class="widget gacha-history-widget">
+                        <h3 class="widget-title">📖 初心者向けリソース</h3>
+                        <ul class="gacha-history-list">
+                            <li><a href="reroll.html">リセマラガイド</a></li>
+                            <li><a href="#">基本操作マニュアル</a></li>
+                            <li><a href="#">チーム編成の基本</a></li>
+                            <li><a href="#">よくある質問</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Progress Calculator -->
+                    <div class="widget calculator-widget">
+                        <h3 class="widget-title">📊 進捗チェッカー</h3>
+                        <div class="calculator">
+                            <div class="calc-input">
+                                <label>現在のランク:</label>
+                                <input type="number" id="currentRank" value="1" min="1">
+                            </div>
+                            <div class="calc-input">
+                                <label>目標ランク:</label>
+                                <input type="number" id="targetRank" value="50" min="1">
+                            </div>
+                            <div class="calc-result">
+                                <p>必要経験値: <span id="requiredExp">約49,000</span></p>
+                                <p>推定日数: <span id="estimatedDays">約15日</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="widget ad-widget">
+                        <h3 class="widget-title">📢 広告</h3>
+                        <!-- admax -->
+                        <script src="https://adm.shinobi.jp/s/9f7c5790f90bc5c18ae58819a422f5af"></script>
+                        <!-- admax -->
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>サイト情報</h4>
+                    <ul>
+                        <li><a href="about.html">サイトについて</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="sitemap.html">サイトマップ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>攻略情報</h4>
+                    <ul>
+                        <li><a href="gacha.html">ガチャ情報</a></li>
+                        <li><a href="players.html">選手評価</a></li>
+                        <li><a href="events.html">イベント攻略</a></li>
+                        <li><a href="guides.html">攻略ガイド</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>初心者向け</h4>
+                    <ul>
+                        <li><a href="beginner.html">始め方ガイド</a></li>
+                        <li><a href="reroll.html">リセマラ情報</a></li>
+                        <li><a href="team-building.html">チーム編成</a></li>
+                        <li><a href="tips.html">攻略のコツ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SNS</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">RSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 プロスピA攻略サイト. All rights reserved.</p>
+                <p><small>※このサイトは個人が運営するファンサイトです。公式とは一切関係ありません。</small></p>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+        // Progress Calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentRankInput = document.getElementById('currentRank');
+            const targetRankInput = document.getElementById('targetRank');
+            const requiredExpSpan = document.getElementById('requiredExp');
+            const estimatedDaysSpan = document.getElementById('estimatedDays');
+            
+            function updateCalculator() {
+                const currentRank = parseInt(currentRankInput.value) || 1;
+                const targetRank = parseInt(targetRankInput.value) || 1;
+                
+                if (targetRank <= currentRank) {
+                    requiredExpSpan.textContent = '0';
+                    estimatedDaysSpan.textContent = '0日';
+                    return;
+                }
+                
+                // 簡易計算（実際のゲームの経験値テーブルに基づいて調整が必要）
+                const rankDiff = targetRank - currentRank;
+                const requiredExp = rankDiff * 1000; // 仮定：1ランクあたり1000経験値
+                const dailyExp = 3000; // 仮定：1日あたり3000経験値獲得
+                const estimatedDays = Math.ceil(requiredExp / dailyExp);
+                
+                requiredExpSpan.textContent = `約${requiredExp.toLocaleString()}`;
+                estimatedDaysSpan.textContent = `約${estimatedDays}日`;
+            }
+            
+            if (currentRankInput && targetRankInput) {
+                currentRankInput.addEventListener('input', updateCalculator);
+                targetRankInput.addEventListener('input', updateCalculator);
+                updateCalculator(); // 初期計算
+            }
+        });
+    </script>
 </body>
 </html>
