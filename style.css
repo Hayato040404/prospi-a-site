@@ -1060,47 +1060,354 @@ a:hover {
 
     .content-wrapper {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .sidebar {
         order: -1;
+        margin-bottom: 1rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
     }
 
     .news-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .news-card {
+        margin-bottom: 1rem;
+    }
+
+    .news-image img {
+        height: 180px;
+    }
+
+    .news-content {
+        padding: 1rem;
+    }
+
+    .news-title {
+        font-size: 1.1rem;
+        line-height: 1.3;
     }
 
     .quick-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .quick-card {
+        padding: 1.5rem 1rem;
+        min-height: 140px;
+    }
+
+    .quick-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .quick-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .quick-card p {
+        font-size: 0.9rem;
     }
 
     .gacha-info-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .info-card {
+        padding: 1rem;
+    }
+
+    .info-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
     }
 
     .players-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .player-card {
+        max-width: 100%;
+    }
+
+    .player-image {
+        height: 160px;
+    }
+
+    .player-info {
+        padding: 1rem;
     }
 
     .tips-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .tip-card {
+        padding: 1rem;
+    }
+
+    .tip-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
     }
 
     .article-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .article-card {
+        margin-bottom: 1rem;
+    }
+
+    .article-image {
+        height: 120px;
+    }
+
+    .article-content {
+        padding: 1rem;
+    }
+
+    .article-content h3 {
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+    }
+
+    .article-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
 
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-section li {
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-section a {
+        font-size: 0.9rem;
     }
 
     .section {
         padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Header adjustments */
+    .header-content {
+        padding: 0.75rem 0;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Page header adjustments */
+    .page-header {
+        padding: 2rem 0;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        padding: 2.5rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Breadcrumb adjustments */
+    .breadcrumb {
+        padding: 0.5rem 0;
+    }
+
+    .breadcrumb-list {
+        font-size: 0.9rem;
+        gap: 0.3rem;
+    }
+
+    /* Widget adjustments */
+    .widget {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .widget-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Form adjustments */
+    .search-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .search-input {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Calculator adjustments */
+    .calc-input input,
+    .calc-input select {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    /* Alert adjustments */
+    .alert {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .alert-icon {
+        font-size: 1.3rem;
+        align-self: flex-start;
+    }
+
+    /* Table-like lists adjustments */
+    .probability-list li,
+    .energy-list li,
+    .bonus-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 0.75rem 0;
+    }
+
+    .probability-list li span:first-child,
+    .energy-list li span:first-child,
+    .bonus-list li span:first-child {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .probability-list li span:last-child,
+    .energy-list li span:last-child,
+    .bonus-list li span:last-child {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    /* Player stats adjustments */
+    .stat-row {
+        padding: 0.4rem 0;
+        font-size: 0.9rem;
+    }
+
+    /* Article item adjustments */
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem 0;
+    }
+
+    .article-rank {
+        align-self: flex-start;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: flex-start;
+    }
+
+    /* Gacha banner adjustments */
+    .gacha-banner img {
+        height: 200px;
+    }
+
+    .gacha-info-overlay {
+        padding: 1rem;
+    }
+
+    .gacha-info-overlay h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* News meta adjustments */
+    .news-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    /* Category list adjustments */
+    .category-list a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
+    /* Social links adjustments */
+    .social-links {
+        gap: 0.75rem;
+    }
+
+    .social-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -1110,23 +1417,379 @@ a:hover {
     }
 
     .hero {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 1rem;
     }
 
     .page-header {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .page-subtitle {
+        font-size: 0.95rem;
     }
 
     .section {
         padding: 1rem;
     }
 
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 0.5rem;
     }
 
     .quick-grid {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .quick-card {
+        padding: 1.25rem 1rem;
+        min-height: 120px;
+    }
+
+    .quick-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .quick-card h3 {
+        font-size: 1rem;
+    }
+
+    .quick-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Header adjustments for very small screens */
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu-btn {
+        padding: 0.4rem;
+    }
+
+    .hamburger-line {
+        width: 22px;
+        height: 2px;
+    }
+
+    /* Widget adjustments for very small screens */
+    .widget {
+        padding: 0.75rem;
+    }
+
+    .widget-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Form adjustments for very small screens */
+    .search-input,
+    .calc-input input,
+    .calc-input select {
+        padding: 0.625rem;
+        font-size: 0.95rem;
+    }
+
+    /* Alert adjustments for very small screens */
+    .alert {
+        padding: 0.75rem;
+    }
+
+    .alert-content strong {
+        font-size: 0.95rem;
+    }
+
+    .alert-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* Article content adjustments */
+    .article-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .article-content p {
+        font-size: 0.85rem;
+    }
+
+    .article-date {
+        font-size: 0.8rem;
+    }
+
+    /* News content adjustments */
+    .news-title {
+        font-size: 1rem;
+    }
+
+    .news-excerpt {
+        font-size: 0.85rem;
+    }
+
+    .news-meta {
+        font-size: 0.8rem;
+    }
+
+    /* Player card adjustments */
+    .player-name {
+        font-size: 1.1rem;
+    }
+
+    .player-team,
+    .player-position {
+        font-size: 0.85rem;
+    }
+
+    .stat-row {
+        font-size: 0.85rem;
+    }
+
+    /* Tip card adjustments */
+    .tip-card h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .tip-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    /* Info card adjustments */
+    .info-card h4 {
+        font-size: 1rem;
+    }
+
+    .probability-list li,
+    .energy-list li,
+    .bonus-list li {
+        padding: 0.5rem 0;
+    }
+
+    .probability-list li span:first-child,
+    .energy-list li span:first-child,
+    .bonus-list li span:first-child {
+        font-size: 0.9rem;
+    }
+
+    .probability-list li span:last-child,
+    .energy-list li span:last-child,
+    .bonus-list li span:last-child {
+        font-size: 0.8rem;
+    }
+
+    /* Breadcrumb adjustments */
+    .breadcrumb-list {
+        font-size: 0.85rem;
+    }
+
+    /* Button adjustments */
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    /* Gacha period badge adjustments */
+    .gacha-period {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Calculator result adjustments */
+    .calc-result p {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    /* Category list adjustments */
+    .category-list a {
+        font-size: 0.85rem;
+    }
+
+    .count {
+        font-size: 0.8rem;
+    }
+
+    /* Social link adjustments */
+    .social-link {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Additional mobile-specific improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .nav-mobile-link,
+    .btn,
+    .search-btn,
+    .social-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Improve readability */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Better spacing for mobile */
+    .main {
+        padding: 1rem 0;
+    }
+
+    /* Improve mobile navigation */
+    .nav-mobile-list {
+        padding: 0.5rem 0;
+    }
+
+    .nav-mobile-link {
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-mobile-link:last-child {
+        border-bottom: none;
+    }
+
+    /* Improve mobile forms */
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Better mobile tables */
+    .info-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Improve mobile cards */
+    .news-card,
+    .article-card,
+    .player-card,
+    .tip-card,
+    .info-card {
+        border-radius: 6px;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Better mobile spacing */
+    .gacha-info-grid,
+    .tips-grid,
+    .article-grid,
+    .players-grid {
+        margin: 1rem 0;
+    }
+
+    /* Improve mobile alerts */
+    .alert {
+        border-radius: 6px;
+        margin: 1rem 0;
+    }
+
+    /* Better mobile buttons */
+    .hero-buttons .btn {
+        border-radius: 6px;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+    }
+
+    /* Improve mobile sidebar */
+    .sidebar .widget:first-child {
+        margin-top: 0;
+    }
+
+    /* Better mobile footer */
+    .footer {
+        margin-top: 2rem;
+        padding: 2rem 0 1rem;
+    }
+
+    /* Improve mobile images */
+    .news-image img,
+    .article-image img,
+    .player-image img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Better mobile typography */
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+        word-wrap: break-word;
+    }
+
+    p {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    /* Improve mobile scroll */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    /* Better mobile performance */
+    * {
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+
+    /* Improve mobile accessibility */
+    .mobile-menu-btn:focus,
+    .search-btn:focus,
+    .btn:focus {
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
+    }
     }
 }
 
