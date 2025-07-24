@@ -21,7 +21,7 @@
     <main class="container mx-auto px-4 py-6">
         <!-- YouTube Live Stream -->
         <section class="mb-8">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4"> ライブ配信</h2>
+            <h2 class="text-xl md:text-2xl font-semibold mb-4">ライブ配信</h2>
             <div class="relative" style="padding-bottom: 56.25%;">
                 <iframe
                     class="absolute top-0 left-0 w-full h-full"
@@ -37,13 +37,15 @@
 
         <!-- Player List -->
         <section class="mb-8">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4">発表されたセレクション選手</h2>
+            <h2 class="text-xl md:text-2xl font-semibold mb-4">⚾ 発表されたセレクション選手</h2>
             <div id="playerList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Players will be dynamically added here -->
             </div>
         </section>
 
-        
+        <!-- Add Player Form -->
+       
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto px-4 text-center">
@@ -70,7 +72,6 @@
                 image: "https://purosupi-a.f5.si/picture/no-image.png",
                 description: "？？？"
             }
-            
         ];
 
         // Function to render a player card
@@ -79,7 +80,7 @@
             const playerCard = document.createElement('div');
             playerCard.className = 'bg-white shadow rounded-lg p-4 flex flex-col';
             playerCard.innerHTML = `
-                <img src="${player.image}" alt="${player.name}" class="w-full h-32 object-cover rounded-md mb-2">
+                <img src="${player.image}" alt="${player.name}" class="max-w-full h-auto object-contain rounded-md mb-2">
                 <h3 class="text-lg font-semibold">${player.name} (${player.team})</h3>
                 <p class="text-blue-600">${player.selectionType}</p>
                 <p class="text-sm text-gray-600 mt-2">${player.description}</p>
