@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="プロスピA 2025セレクション選手発表ライブ配信。KONAMI公式YouTubeを視聴しながら、選手名、画像、概要をリアルタイムで更新！">
+    <meta name="keywords" content="プロスピA,セレクション,2025,ライブ配信,KONAMI,プロ野球スピリッツ,選手発表">
+    <title>プロスピA 2025セレクション選手発表ライブ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-2xl md:text-3xl font-bold">プロスピA 2025セレクション選手発表ライブ</h1>
+            <p class="mt-2">2025年7月24日 21:00 JST | パワプロ・プロスピ公式YouTube (#スピニュース)</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- YouTube Live Stream -->
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-semibold mb-4">📺 ライブ配信</h2>
+            <div class="relative" style="padding-bottom: 56.25%;">
+                <iframe
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/live_stream?channel=UCehZf4kn7EZ3_1N6zQ1GQGw"
+                    title="プロスピA 2025セレクション選手発表ライブ"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <p class="mt-2 text-sm text-gray-600">公式YouTubeチャンネル「パワプロ・プロスピ公式」より。セレクション第1弾・第2弾の選手発表をリアルタイムでチェック！</p>
+        </section>
+
+        <!-- Player List -->
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-semibold mb-4">⚾ 発表されたセレクション選手</h2>
+            <div id="playerList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Players will be dynamically added here -->
+            </div>
+        </section>
+
+        
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 プロスピA攻略ファンサイト | <a href="https://www.konami.com/games/prospi_a/" class="underline">KONAMI公式サイト</a></p>
+            <p class="text-sm">このサイトは非公式ファンサイトです。KONAMIおよびプロ野球スピリッツAとは一切関係ありません。</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Sample player data
+        const samplePlayers = [
+            {
+                name: "？？？",
+                team: "？？？",
+                selectionType: "第1弾",
+                image: "https://purosupi-a.f5.si/picture/",
+                description: "？？？"
+            },
+            {
+                name: "？？？",
+                team: "？？？",
+                selectionType: "第1弾",
+                image: "https://purosupi-a.f5.si/picture/",
+                description: "？？？"
+            }
+            
+        ];
+
+        // Function to render a player card
+        function renderPlayer(player) {
+            const playerList = document.getElementById('playerList');
+            const playerCard = document.createElement('div');
+            playerCard.className = 'bg-white shadow rounded-lg p-4 flex flex-col';
+            playerCard.innerHTML = `
+                <img src="${player.image}" alt="${player.name}" class="w-full h-32 object-cover rounded-md mb-2">
+                <h3 class="text-lg font-semibold">${player.name} (${player.team})</h3>
+                <p class="text-blue-600">${player.selectionType}</p>
+                <p class="text-sm text-gray-600 mt-2">${player.description}</p>
+            `;
+            playerList.appendChild(playerCard);
+        }
+
+        // Load sample players on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            samplePlayers.forEach(player => renderPlayer(player));
+        });
+
+        // Handle form submission
+        document.getElementById('playerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const player = {
+                name: document.getElementById('playerName').value,
+                team: document.getElementById('teamName').value,
+                selectionType: document.getElementById('selectionType').value,
+                image: document.getElementById('playerImage').value,
+                description: document.getElementById('playerDescription').value
+            };
+            
+            // Render new player
+            renderPlayer(player);
+            
+            // Clear form
+            document.getElementById('playerForm').reset();
+        });
+    </script>
+</body>
+</html>
