@@ -25,6 +25,7 @@
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -113,7 +114,10 @@
                 <div class="main-content">
                     <!-- Top Players -->
                     <section class="section top-players">
-                        <h2 class="section-title">🏆 最強選手ランキング</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="trophy" class="section-title-icon"></i>
+                            最強選手ランキング
+                        </h2>
                         <div class="players-grid">
                             <div class="player-card">
                                 <div class="player-image">
@@ -209,7 +213,10 @@
 
                     <!-- Player Reviews -->
                     <section class="section player-reviews">
-                        <h2 class="section-title"> 選手レビュー</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="message-circle" class="section-title-icon"></i>
+                            選手レビュー
+                        </h2>
                         <div class="article-grid">
                             <article class="article-card">
                                 <div class="article-image">
@@ -248,10 +255,16 @@
 
                     <!-- Position Rankings -->
                     <section class="section position-rankings">
-                        <h2 class="section-title">📊 ポジション別ランキング</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="bar-chart-3" class="section-title-icon"></i>
+                            ポジション別ランキング
+                        </h2>
                         <div class="gacha-info-grid">
                             <div class="info-card">
-                                <h4>⚾ 投手ランキング</h4>
+                                <h4>
+                                    <i data-lucide="circle" style="width: 16px; height: 16px; display: inline; margin-right: 0.5rem; color: #007bff;"></i>
+                                    投手ランキング
+                                </h4>
                                 <ul class="probability-list">
                                     <li>
                                         <span>1位：バウアー</span>
@@ -269,7 +282,10 @@
                             </div>
 
                             <div class="info-card">
-                                <h4>🥎 内野手ランキング</h4>
+                                <h4>
+                                    <i data-lucide="users" style="width: 16px; height: 16px; display: inline; margin-right: 0.5rem; color: #007bff;"></i>
+                                    内野手ランキング
+                                </h4>
                                 <ul class="energy-list">
                                     <li>
                                         <span>1位：佐藤輝明</span>
@@ -287,7 +303,10 @@
                             </div>
 
                             <div class="info-card">
-                                <h4>🏃 外野手ランキング</h4>
+                                <h4>
+                                    <i data-lucide="user-check" style="width: 16px; height: 16px; display: inline; margin-right: 0.5rem; color: #007bff;"></i>
+                                    外野手ランキング
+                                </h4>
                                 <ul class="bonus-list">
                                     <li>
                                         <span>1位：万波中正</span>
@@ -308,28 +327,31 @@
 
                     <!-- Training Guide -->
                     <section class="section training-guide">
-                        <h2 class="section-title">💪 育成ガイド</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="trending-up" class="section-title-icon"></i>
+                            育成ガイド
+                        </h2>
                         <div class="tips-grid">
                             <div class="tip-card">
-                                <div class="tip-icon">⭐</div>
+                                <i data-lucide="star" class="tip-icon"></i>
                                 <h4>特訓の基本</h4>
                                 <p>選手の能力値を効率的に上げるための特訓方法。素材の使い分けと優先順位について詳しく解説します。</p>
                             </div>
 
                             <div class="tip-card">
-                                <div class="tip-icon">🔥</div>
+                                <i data-lucide="flame" class="tip-icon"></i>
                                 <h4>限界突破のタイミング</h4>
                                 <p>限界突破を行う最適なタイミングと、必要な素材の効率的な集め方について説明します。</p>
                             </div>
 
                             <div class="tip-card">
-                                <div class="tip-icon">🏆</div>
+                                <i data-lucide="trophy" class="tip-icon"></i>
                                 <h4>称号の選び方</h4>
                                 <p>選手の特性に合った称号の選択方法。能力値の伸びを最大化するコツを紹介します。</p>
                             </div>
 
                             <div class="tip-card">
-                                <div class="tip-icon">📈</div>
+                                <i data-lucide="trending-up" class="tip-icon"></i>
                                 <h4>長期育成計画</h4>
                                 <p>選手の最終的な目標を設定し、計画的に育成を進める方法について解説します。</p>
                             </div>
@@ -338,7 +360,10 @@
 
                     <!-- Related Articles -->
                     <section class="section related-articles">
-                        <h2 class="section-title">📚 関連記事</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="book-open" class="section-title-icon"></i>
+                            関連記事
+                        </h2>
                         <div class="article-grid">
                             <article class="article-card">
                                 <div class="article-image">
@@ -369,7 +394,10 @@
                 <aside class="sidebar">
                     <!-- Player Search -->
                     <div class="widget search-widget">
-                        <h3 class="widget-title">🔍 選手検索</h3>
+                        <h3 class="widget-title">
+                            <i data-lucide="search" class="widget-title-icon"></i>
+                            選手検索
+                        </h3>
                         <form class="search-form">
                             <input type="text" class="search-input" placeholder="選手名を入力...">
                             <button type="submit" class="search-btn">検索</button>
@@ -378,7 +406,10 @@
 
                     <!-- Position Filter -->
                     <div class="widget categories-widget">
-                        <h3 class="widget-title">📂 ポジション別</h3>
+                        <h3 class="widget-title">
+                            <i data-lucide="folder" class="widget-title-icon"></i>
+                            ポジション別
+                        </h3>
                         <ul class="category-list">
                             <li><a href="#pitcher">投手 <span class="count">(15)</span></a></li>
                             <li><a href="#catcher">捕手 <span class="count">(8)</span></a></li>
@@ -390,7 +421,10 @@
 
                     <!-- Player Comparison -->
                     <div class="widget calculator-widget">
-                        <h3 class="widget-title">⚖️ 選手比較</h3>
+                        <h3 class="widget-title">
+                            <i data-lucide="scale" class="widget-title-icon"></i>
+                            選手比較
+                        </h3>
                         <div class="calculator">
                             <div class="calc-input">
                                 <label>選手A 総合力:</label>
@@ -409,7 +443,10 @@
 
                     <!-- Ad Space -->
                     <div class="widget ad-widget">
-                        <h3 class="widget-title">📢 広告</h3>
+                        <h3 class="widget-title">
+                            <i data-lucide="megaphone" class="widget-title-icon"></i>
+                            広告
+                        </h3>
                         <!-- admax -->
                         <script src="https://adm.shinobi.jp/s/9f7c5790f90bc5c18ae58819a422f5af"></script>
                         <!-- admax -->
@@ -469,6 +506,14 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
     <script>
         // Player Comparison Calculator
         document.addEventListener('DOMContentLoaded', function() {

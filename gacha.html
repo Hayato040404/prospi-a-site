@@ -10,6 +10,7 @@
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -83,7 +84,10 @@
                     <!-- プレゼントスカウト -->
                     <section class="section current-gacha">
                         <div class="section-header">
-                            <h2 class="section-title">🎰 開催中のガチャ</h2>
+                            <h2 class="section-title">
+                                <i data-lucide="dice-6" class="section-title-icon"></i>
+                                開催中のガチャ
+                            </h2>
                             <span class="gacha-period">〜 2025年8月22日(金) 12:59</span>
                         </div>
                         
@@ -98,7 +102,10 @@
                         <div class="gacha-details">
                             <div class="gacha-info-grid">
                                 <div class="info-card">
-                                    <h4>🎯 排出確率</h4>
+                                    <h4>
+                                        <i data-lucide="target" style="width: 16px; height: 16px; display: inline; margin-right: 0.5rem; color: #007bff;"></i>
+                                        排出確率
+                                    </h4>
                                     <ul class="probability-list">
                                         <li class="rank-s">
                                             <span>Sランク選手</span>
@@ -108,7 +115,10 @@
                                 </div>
 
                                 <div class="info-card">
-                                    <h4>💎 必要エナジー</h4>
+                                    <h4>
+                                        <i data-lucide="gem" style="width: 16px; height: 16px; display: inline; margin-right: 0.5rem; color: #007bff;"></i>
+                                        必要エナジー
+                                    </h4>
                                     <ul class="energy-list">
                                         <li>
                                             <span>1回限り</span>
@@ -118,7 +128,10 @@
                                 </div>
 
                                 <div class="info-card">
-                                    <h4>🎁 特典情報</h4>
+                                    <h4>
+                                        <i data-lucide="gift" style="width: 16px; height: 16px; display: inline; margin-right: 0.5rem; color: #007bff;"></i>
+                                        特典情報
+                                    </h4>
                                     <ul class="bonus-list">
                                         <li>
                                             <span>お1人様1回限り</span>
@@ -137,7 +150,10 @@
                     <!-- セレクションカーニバル -->
                     <section class="section current-gacha">
                         <div class="section-header">
-                            <h2 class="section-title">🎉 セレクションカーニバル</h2>
+                            <h2 class="section-title">
+                                <i data-lucide="party-popper" class="section-title-icon"></i>
+                                セレクションカーニバル
+                            </h2>
                             <span class="gacha-period">〜 2025年8月22日(金) 12:59</span>
                         </div>
                         
@@ -190,7 +206,10 @@
 
                     <!-- Featured Players -->
                     <section class="section featured-players">
-                        <h2 class="section-title">⭐ 登場選手一覧（10 Years Selects）</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="star" class="section-title-icon"></i>
+                            登場選手一覧（10 Years Selects）
+                        </h2>
                         <div class="players-grid">
                             <!-- セ・リーグ -->
                             <div class="player-card"><h3>菅野智之（巨人/先発）</h3></div>
@@ -211,16 +230,19 @@
 
                     <!-- Gacha Tips -->
                     <section class="section gacha-tips">
-                        <h2 class="section-title">💡 引く前に知っておきたいポイント</h2>
+                        <h2 class="section-title">
+                            <i data-lucide="lightbulb" class="section-title-icon"></i>
+                            引く前に知っておきたいポイント
+                        </h2>
                         <div class="tips-grid">
                             <div class="tip-card">
-                                <div class="tip-icon">🎁</div>
+                                <i data-lucide="gift" class="tip-icon"></i>
                                 <h4>完全無料の特別スカウト</h4>
                                 <p>「2025 プロスピセレクションプレゼントスカウト」は無料で1回だけ引けます。必ず引いておきましょう！</p>
                             </div>
 
                             <div class="tip-card">
-                                <div class="tip-icon">⚡</div>
+                                <i data-lucide="zap" class="tip-icon"></i>
                                 <h4>セレクションカーニバルも無料！</h4>
                                 <p>期間中は10連無料で、さらにセレクション第3弾が1人確定。見逃す手はありません。</p>
                             </div>
@@ -232,7 +254,10 @@
                 <aside class="sidebar">
                     <!-- Quick Info -->
                     <div class="widget quick-info-widget">
-                        <h3 class="widget-title">⚡ クイック情報</h3>
+                        <h3 class="widget-title">
+                            <i data-lucide="zap" class="widget-title-icon"></i>
+                            クイック情報
+                        </h3>
                         <div class="quick-info">
                             <div class="info-item">
                                 <span class="info-label">現在のガチャ</span>
@@ -251,7 +276,10 @@
 
                     <!-- Gacha History -->
                     <div class="widget gacha-history-widget">
-                        <h3 class="widget-title">📅 過去のガチャ</h3>
+                        <h3 class="widget-title">
+                            <i data-lucide="calendar" class="widget-title-icon"></i>
+                            過去のガチャ
+                        </h3>
                         <ul class="gacha-history-list">
                             <li><a href="#">松井秀喜セレクション</a> <span class="date">2025年6月</span></li>
                             <li><a href="#">TS第2弾</a></li>
@@ -313,5 +341,13 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
 </body>
 </html>

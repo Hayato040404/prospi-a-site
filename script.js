@@ -363,4 +363,9 @@ const Utils = {
 // Initialize all functionality when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     console.log('プロスピA攻略サイト initialized');
+    
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
