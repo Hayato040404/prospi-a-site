@@ -2,55 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://purosupi-a.f5.si/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/index.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/gacha.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/gacha-ex.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/players.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/events.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/event-homerun.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/event-hero.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://purosupi-a.f5.si/event-sunau9.html</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/event-renda.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,55 +68,55 @@
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/beginner.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/reroll.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/team-building.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/tips.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/about.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/contact.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/privacy.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/sitemap.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/sele-sokuhou.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
