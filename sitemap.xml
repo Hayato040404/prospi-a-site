@@ -110,6 +110,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://purosupi-a.f5.si/event-tyosi.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://purosupi-a.f5.si/team-building.html</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
