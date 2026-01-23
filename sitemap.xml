@@ -62,6 +62,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://purosupi-a.f5.si/event-traveler.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://purosupi-a.f5.si/event-hero.html</loc>
     <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
