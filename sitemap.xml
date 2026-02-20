@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://purosupi-a.f5.si/index.html</loc>
-    <lastmod>2026-02-11</lastmod>
+    <lastmod>2026-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,6 +102,12 @@
   <url>
     <loc>https://purosupi-a.f5.si/event-doujou.html</loc>
     <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://purosupi-a.f5.si/event-arena.html</loc>
+    <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
