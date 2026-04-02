@@ -9,18 +9,139 @@
       gtag('js', new Date());
       gtag('config', 'G-FWTXYJ505H');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="サクッと！育星ストリート攻略。すごろく形式で選手を育成してコーチptを稼ぎ、Sランク契約書などの累計報酬を獲得する攻略ポイント、効率的なカード運用とマスの狙いどころを丁寧に解説します。">
-    <meta name="keywords" content="プロスピ,育星ストリート,サクッと育成ストリート,イベント,攻略,累計,育成,コーチpt">
+    <meta name="description" content="【プロスピA】サクッと！育星ストリート完全攻略2026｜4/1(水)15:00～4/7(火)14:59開催。自然回復でSランク契約書を狙う方法、最高難易度VERY HARDの進め方、スターナインスコアの上げ方、倍マス・特訓マス・カードマスの狙い方、スペシャルカード活用術を徹底解説。">
+    <meta name="keywords" content="プロスピA 育星ストリート,サクッと育星ストリート,攻略,スターナインスコア,倍マス,特訓マス,カードマス,スペシャルカード,累計報酬,Sランク契約書,自然回復">
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <title>サクッと！育星ストリート攻略 - プロスピA攻略サイト</title>
-    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://purosupi-a.f5.si/yukiboshi-street-2026.html">
+    <meta property="og:title" content="【プロスピA】サクッと！育星ストリート完全攻略2026｜自然回復で完走するコツ">
+    <meta property="og:description" content="4/1～4/7開催の育星ストリートを、VERY HARD・特訓マス・スペシャルカード・自然回復の使い方まで細かく解説。">
+    <meta property="og:image" content="/picture/yukiboshi-street-2026.jpg">
+
+    <title>【プロスピA】サクッと！育星ストリート完全攻略2026｜自然回復完走のコツ</title>
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root{
+            --bubble-blue:#f4f9ff;
+            --bubble-blue-line:#cfe0ff;
+            --bubble-green:#f2fff6;
+            --bubble-green-line:#c9ecd2;
+            --bubble-warn:#fff8ea;
+            --bubble-warn-line:#f2d49a;
+        }
+        .article-intro strong,
+        .section strong {
+            font-weight: 800;
+        }
+        .bubble {
+            position: relative;
+            padding: 1.05rem 1.15rem;
+            margin: 1rem 0 1.2rem;
+            border-radius: 16px;
+            background: var(--bubble-blue);
+            border: 1px solid var(--bubble-blue-line);
+            box-shadow: 0 10px 24px rgba(15,23,42,.05);
+        }
+        .bubble::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: 22px;
+            width: 16px;
+            height: 16px;
+            background: inherit;
+            border-left: 1px solid var(--bubble-blue-line);
+            border-top: 1px solid var(--bubble-blue-line);
+            transform: rotate(45deg);
+        }
+        .bubble .label {
+            display:inline-block;
+            font-size:.78rem;
+            font-weight:800;
+            letter-spacing:.04em;
+            color:#1d4ed8;
+            background:#e8f0ff;
+            border-radius:999px;
+            padding:.25rem .6rem;
+            margin-bottom:.7rem;
+        }
+        .bubble.green { background: var(--bubble-green); border-color: var(--bubble-green-line); }
+        .bubble.green::before { border-left-color: var(--bubble-green-line); border-top-color: var(--bubble-green-line); }
+        .bubble.green .label { color:#047857; background:#e6f8ee; }
+        .bubble.warn { background: var(--bubble-warn); border-color: var(--bubble-warn-line); }
+        .bubble.warn::before { border-left-color: var(--bubble-warn-line); border-top-color: var(--bubble-warn-line); }
+        .bubble.warn .label { color:#b45309; background:#fff1d5; }
+        .bubble p { margin:0; line-height:1.9; }
+
+        .article-grid {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .article-card {
+            background:#fff;
+            border:1px solid #e7edf5;
+            border-radius: 14px;
+            padding: 1rem 1rem 1.1rem;
+            box-shadow: 0 8px 20px rgba(15,23,42,.04);
+        }
+        .article-card h3 {
+            margin:0 0 .5rem;
+            font-size:1.04rem;
+            line-height:1.5;
+        }
+        .article-card p {
+            margin:0;
+            line-height:1.9;
+        }
+        .small-note {
+            font-size:.94rem;
+            color:#5b6472;
+        }
+        .hero-box {
+            background: linear-gradient(45deg, #1a73e8, #34a853);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 12px;
+        }
+        .hero-box h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            margin-bottom: .5rem;
+        }
+        .hero-box p { font-size: clamp(1rem, 2vw, 1.3rem); margin:0; }
+        .article-content p, .section p, .section li, details p { line-height: 1.95; }
+        .ranking-table td, .ranking-table th { vertical-align: top; line-height: 1.75; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "【プロスピA】サクッと！育星ストリート完全攻略2026｜自然回復完走のコツ",
+      "description": "4/1(水)15:00～4/7(火)14:59開催の育星ストリートについて、VERY HARDの進め方、スターナインスコアの上げ方、倍マス・特訓マス・カードマス・スペシャルカード活用を解説。",
+      "datePublished": "2026-04-01",
+      "dateModified": "2026-04-02",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://purosupi-a.f5.si/event-street.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "プロスピA攻略サイト"
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -29,8 +150,6 @@
                         <h1>プロスピA攻略</h1>
                     </a>
                 </div>
-                
-                <!-- Desktop Navigation -->
                 <nav class="nav-desktop">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">ホーム</a></li>
@@ -41,8 +160,6 @@
                         <li><a href="beginner.html" class="nav-link">初心者向け</a></li>
                     </ul>
                 </nav>
-                
-                <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -50,239 +167,282 @@
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Navigation -->
         <nav class="nav-mobile" id="mobileNav">
             <ul class="nav-mobile-list">
-                <li><a href="index.html" class="nav-mobile-link">ホーム</a></li>
-                <li><a href="gacha.html" class="nav-mobile-link">ガチャ情報</a></li>
-                <li><a href="players.html" class="nav-mobile-link">選手評価</a></li>
-                <li><a href="events.html" class="nav-mobile-link">イベント</a></li>
-                <li><a href="guides.html" class="nav-mobile-link">攻略ガイド</a></li>
-                <li><a href="beginner.html" class="nav-mobile-link">初心者向け</a></li>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="gacha.html">ガチャ情報</a></li>
+                <li><a href="players.html">選手評価</a></li>
+                <li><a href="events.html">イベント</a></li>
+                <li><a href="guides.html">攻略ガイド</a></li>
+                <li><a href="beginner.html">初心者向け</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Breadcrumb -->
     <nav class="breadcrumb">
         <div class="container">
             <ul class="breadcrumb-list">
                 <li><a href="index.html">ホーム</a></li>
-                <li>イベント攻略</li>
+                <li><a href="events.html">イベント攻略</a></li>
                 <li>サクッと！育星ストリート</li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title">サクッと！育星ストリート</h1>
-            <p class="page-subtitle">すごろく形式で選手を育成してコーチptを稼ぐイベント。イベント内で育てた選手は「イベント専用」で楽しむ形式です。</p>
+            <h1 class="page-title">サクッと！育星ストリート完全攻略2026</h1>
+            <p class="page-subtitle">
+                4月1日(水)15:00～4月7日(火)14:59開催。自然回復で進めやすい育成イベントを、VERY HARDの選び方、
+                スターナインスコアの上げ方、倍マス・特訓マス・カードマスの狙い方までまとめて解説します。
+            </p>
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="main">
         <div class="container">
             <div class="content-wrapper">
-                <!-- Main Content Area -->
                 <div class="main-content">
-                    <!-- Current Events -->
+
                     <section class="section current-events">
                         <div class="section-header">
-                            <h2 class="section-title">開催中のイベント</h2>
-                            <!-- 公式告知に合わせた開催期間を表示 -->
-                            <span class="gacha-period">2025年12月12日(金)15:00 ～ 2025年12月19日(金)12:59</span>
+                            <h2 class="section-title"><i class="fas fa-calendar-alt section-title-icon"></i>開催期間・イベント概要</h2>
                         </div>
-                        
                         <div class="gacha-banner">
-                            <img src="/picture/育星ストリート_banner.jpg?height=300&width=800" alt="サクッと育星ストリートバナー">
-                            <div class="gacha-info-overlay">
-                                <h3>サクッと！育星ストリート</h3>
-                                <p>育成すごろくでコーチptを稼ぎ、累計報酬でSランク契約書などを狙おう！</p>
+                            <div class="hero-box">
+                                <h2>サクッと！育星ストリート</h2>
+                                <p>育成すごろくで選手を育て、スターナインスコア報酬を回収するイベントです。</p>
                             </div>
                         </div>
+                        <p>
+                            <strong>開催期間</strong>：2026年4月1日(水) 15:00 ～ 4月7日(火) 14:59（7日間）
+                        </p>
+                        <p>
+                            育星ストリートは、すごろく形式で練習カードを進めながら選手を育成していくイベントです。
+                            コーチLvが上がるごとに選べる難易度が広がっていき、最終的には<strong>VERY HARD</strong>を周回する流れになります。
+                            ただ、成長値回収だけが目的なら、全自操作にこだわる必要はありません。
+                        </p>
+                        <div class="bubble">
+                            <div class="label">コツ</div>
+                            <p>
+                                まずは<strong>最高難易度を選ぶ</strong>ことが基本です。
+                                コーチLvが上がるほど配布カードのLvも上がるので、後半ほど育成効率がよくなります。
+                            </p>
+                        </div>
+                        <p>
+                            このイベントは、イベントマスの止まり方とカードの使い方で大きく差がつきます。
+                            倍マスや特訓マス、カードマスをうまく踏めると、同じ日数でも育成結果がかなり変わります。
+                            そのため、ただ進めるだけでなく、どのマスに止まるかを意識するのが大事です。
+                        </p>
+                    </section>
 
-                        <div class="gacha-details">
-                            <div class="gacha-info-grid">
-                                <div class="info-card">
-                                    <h4>イベント概要</h4>
-                                    <p>「すごろく」形式の育成イベントです。カード（練習カード）を選んでマスを進め、節の最後にある試合マスで試合を行い、育成が完了するとコーチptが得られます。獲得したスタースコアやコーチptに応じて累計報酬が手に入ります。</p>
-                                </div>
-
-                                <div class="info-card">
-                                    <h4>主な累計報酬（例）</h4>
-                                    <ul class="probability-list">
-                                        <li>Sランク契約書（最終累計報酬の代表例）</li>
-                                        <li>Sランク特守コーチ / Aランク特訓コーチ</li>
-                                        <li>エナジー（複数回分）</li>
-                                        <li>スカウトポイント・スピメダル・コイン など</li>
-                                        <li>（累計ノルマ例：最終報酬で250,000コーチpt前後のケースあり）</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <section class="section rewards-section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-trophy section-title-icon"></i>主要報酬一覧</h2>
+                        </div>
+                        <table class="ranking-table">
+                            <thead>
+                                <tr><th>報酬種類</th><th>獲得条件</th><th>ひとこと</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Sランク契約書</strong></td><td>累計報酬の最終到達</td><td>最優先で狙いたい報酬</td></tr>
+                                <tr><td>Sランク特守コーチ / Aランク特訓コーチ</td><td>累計コーチpt</td><td>育成素材としても価値が高い</td></tr>
+                                <tr><td>エナジー（合計65個）</td><td>累計・ターン報酬</td><td>イベント参加のうまみが大きい</td></tr>
+                                <tr><td>スカウトP・スピメダル・コイン</td><td>累計報酬</td><td>サブ報酬もまとめて回収できる</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="bubble green">
+                            <div class="label">ポイント</div>
+                            <p>
+                                Game8でも、育星ストリートは<strong>累計Sランク契約書あり</strong>、エナジー獲得数は<strong>65</strong>と整理されています。
+                                報酬回収だけでも十分価値があるイベントです。 
+                            </p>
                         </div>
                     </section>
 
-                    <!-- 進め方 -->
                     <section class="section gameplay-guide">
                         <div class="section-header">
-                            <h2 class="section-title">効率的な進め方（サマリ）</h2>
+                            <h2 class="section-title"><i class="fas fa-running section-title-icon"></i>効率的な進め方</h2>
                         </div>
                         <div class="article-grid">
                             <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/picture/育成毎日.jpg?height=150&width=250" alt="毎日プレイ">
-                                </div>
                                 <div class="article-content">
-                                    <h3>まずはイベントコストの管理</h3>
-                                    <p>1人の選手を育成するには節ごとの「試合マス」で試合をするためのイベントコストが必要になります。コスト回復を意識して計画的に育成を進めましょう。</p>
+                                    <h3>1. 最高難易度を選択する</h3>
+                                    <p>
+                                        コーチLvが上がるごとに選択できる範囲が広がり、最終的には<strong>VERY HARD</strong>周回が前提になります。
+                                        配られるカードLvも上がるため、難なく進めやすくなるのがポイントです。
+                                    </p>
                                 </div>
                             </article>
-
                             <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/picture/カード選択.jpg?height=150&width=250" alt="カード選択">
-                                </div>
                                 <div class="article-content">
-                                    <h3>カードはレベルの高いものを優先</h3>
-                                    <p>育成中に使用する練習カードはレベルの高いカードを優先して使うと成長効率が良くなります。低レベルのカードはこまめにリセット（シャッフル）を検討しましょう。</p>
+                                    <h3>2. 倍マス・特訓マスを狙う</h3>
+                                    <p>
+                                        2倍・3倍マスや虹色特訓マスは、成長値を伸ばすうえでかなり強力です。
+                                        イベントマスに止まれるカードを優先し、止まり方を工夫すると効率が上がります。
+                                    </p>
                                 </div>
                             </article>
-
                             <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/picture/特訓マス.jpg?height=150&width=250" alt="特訓マス">
-                                </div>
                                 <div class="article-content">
-                                    <h3>特訓・×2/×3・金箱マスを優先で狙う</h3>
-                                    <p>ボーナス倍率や金箱、虹色特訓マスは一気に成長値を稼げます。マップの進行とカードのマスサイズを調整して、これらのマスを踏めるよう計画的に進めてください。</p>
-                                </div>
-                            </article>
-
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/picture/スペシャルカード.jpg?height=150&width=250" alt="スペシャルカード">
-                                </div>
-                                <div class="article-content">
-                                    <h3>スペシャルカードは温存も有り</h3>
-                                    <p>スペシャルカードは強力なため、1人に集中的に使って一気に伸ばす戦略も有効です。次の育成に持ち越せるものもあるため無理に使わず貯める選択肢もあります。</p>
+                                    <h3>3. スペシャルカードを有効活用</h3>
+                                    <p>
+                                        スペシャルカードは、カードの流れを整えたいときや、イベントマスへ寄せたいときに便利です。
+                                        育成を急ぎたい選手ほど、積極的に使う価値があります。
+                                    </p>
                                 </div>
                             </article>
                         </div>
+
+                        <div class="bubble warn">
+                            <div class="label">注意</div>
+                            <p>
+                                <strong>「成長値だけ回収したい」なら全自操作は必須ではありません。</strong>
+                                時短したい場合は、必要な場面だけ確認しながら進めるのも十分アリです。
+                            </p>
+                        </div>
                     </section>
 
-                    <!-- 攻略のコツ詳細 -->
                     <section class="section strategy-tips">
                         <div class="section-header">
-                            <h2 class="section-title">詳しい攻略ポイント</h4></h2>
+                            <h2 class="section-title"><i class="fas fa-lightbulb section-title-icon"></i>詳しい攻略ポイント</h2>
                         </div>
-                        <div class="strategy-grid">
-                            <div class="strategy-card">
-                                <h4>マップの節構成を把握する</h4>
-                                <p>1節は複数マス（例：13マス）で構成され、節の最後に試合マスがあるタイプが多いです。試合マスには必ず止まる（強制）ため、その手前のターンで「マスが大きいカード」やボーナスを使うと効率的です。</p>
-                            </div>
-
-                            <div class="strategy-card">
-                                <h4>スタースコア（成長量）とコーチpt</h4>
-                                <p>育てた選手のスタースコア増加に応じてコーチptが獲得できます。累計コーチptでSランク契約書などの報酬が手に入るため、総合的な成長値を意識して複数選手を育てるのが重要です。</p>
-                            </div>
-
-                            <div class="strategy-card">
-                                <h4>自然回復での達成可否</h4>
-                                <p>イベント期間（7日程度）と累計ノルマ次第では自然回復（無償分）で全報酬に届くこともありますが、日々の回復を逃さずプレイする必要があります。早めに全回復の通知を設定しておきましょう。</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Q&A -->
-                    <section class="section qa">
-                        <h2 class="section-title">よくある質問</h2>
-                        <div class="qa-grid">
-                            <div class="qa-item">
-                                <h4>Q：育てた選手はそのまま自分の所持選手になりますか？</h4>
-                                <p>A：いいえ。イベント内で育てる選手は「イベント専用の育成」で、通常の所持選手に自動で加わるタイプではありません（遊んで育てる形式）。</p>
-                            </div>
-                            <div class="qa-item">
-                                <h4>Q：累計報酬でSランク契約書はもらえますか？</h4>
-                                <p>A：はい。過去開催の実例では累計報酬ラインの最終付近にSランク契約書が設定されているケースがあります（例：最終累計250,000ptでSランク契約書など）。</p>
-                            </div>
-                            <div class="qa-item">
-                                <h4>Q：スペシャルカードは次の育成に持ち越せますか？</h4>
-                                <p>A：獲得したスペシャルカードの一部は次の選手育成時にも使える仕様のため、無闇に使わず貯める戦略も有効です。</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Related Articles -->
-                    <section class="section related-articles">
-                        <h2 class="section-title">関連情報</h2>
                         <div class="article-grid">
                             <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/placeholder.svg?height=120&width=200" alt="ガチャ">
-                                </div>
-                                <div class="article-content">
-                                    <h3><a href="gacha.html">最新ガチャ情報</a></h3>
-                                    <p>イベント連動のガチャ・特別選手をチェック</p>
-                                </div>
+                                <h3>試合マス直前で大きいカードを使う</h3>
+                                <p>
+                                    試合マスの手前にいるときは、マス数値の大きいカードを使うと、日程を強制的に進めずに
+                                    練習効果だけを大きく取れる場面があります。Game8でもこの運用が推されています。
+                                </p>
                             </article>
                             <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/placeholder.svg?height=120&width=200" alt="育成戦略">
-                                </div>
-                                <div class="article-content">
-                                    <h3><a href="training-tips.html">育成カードの選び方</a></h3>
-                                    <p>最短で効率よく育てるカード運用法</p>
-                                </div>
+                                <h3>スターナインスコアを意識する</h3>
+                                <p>
+                                    育星ストリートでは、<strong>スターナインスコア</strong>を伸ばすことが報酬面でも重要です。
+                                    「スター選手の素質あり」選手を選ぶと、初期から星が高く、報酬到達が早くなります。
+                                </p>
+                            </article>
+                            <article class="article-card">
+                                <h3>イベントマスの優先順位</h3>
+                                <p>
+                                    おすすめは、<strong>特訓マス（虹）→ 2倍マス → 3倍マス → カードマス</strong>の順です。
+                                    迷ったら、成長値を伸ばせるマスを優先すると育成が安定します。
+                                </p>
                             </article>
                         </div>
+
+                        <div class="bubble">
+                            <div class="label">コツ</div>
+                            <p>
+                                <strong>イベントマスに止まる練習カードを選ぶ</strong>のが基本です。
+                                わざわざ遠回りしなくても、止まるマスを意識するだけで結果が変わります。
+                            </p>
+                        </div>
+
+                        <p>
+                            さらに、育成オーダーで進めても試合相手のスピリッツは低めに設定されているので、
+                            報酬回収目的なら大きく構えすぎなくても大丈夫です。
+                            まずは流れをつかみ、次にカードの使いどころを覚えると、かなり安定して回せるようになります。
+                        </p>
                     </section>
+
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-check-circle section-title-icon"></i>自然回復で進めるときの考え方</h2>
+                        </div>
+                        <p>
+                            育星ストリートは、毎日少しずつ触っていくだけでも進めやすいイベントです。
+                            無理にエナジーを追加投入するより、自然回復をきっちり消費して、イベントマスや倍マスを丁寧に拾う方が安定します。
+                        </p>
+                        <div class="bubble green">
+                            <div class="label">ポイント</div>
+                            <p>
+                                <strong>自然回復＋最高難易度＋イベントマス優先</strong>。
+                                この組み合わせが、いちばん分かりやすくて失敗しにくい進め方です。
+                            </p>
+                        </div>
+                        <p>
+                            報酬を急いで取り切る必要がなければ、日々のログインに合わせて少しずつ進めるだけでも十分です。
+                            取り逃しを減らしたいなら、カードマスやスペシャルカードの確認を忘れないようにしましょう。
+                        </p>
+                    </section>
+
+                    <section class="section faq-section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-question-circle section-title-icon"></i>よくある質問（FAQ）</h2>
+                        </div>
+                        <details>
+                            <summary>自然回復だけで完走できますか？</summary>
+                            <p>
+                                はい。攻略記事でも自然回復や練習カード効率が案内されており、累計報酬の回収を狙いやすいイベントとして整理されています。
+                                まずは毎日きちんと消費することが大切です。
+                            </p>
+                        </details>
+                        <details>
+                            <summary>スターナインスコアはどう上げる？</summary>
+                            <p>
+                                「スター選手の素質あり」選手を選び、スペシャルカードと倍マスを活用するのが基本です。
+                                高い星を取りやすい育成を意識すると、報酬までの到達が早くなります。
+                            </p>
+                        </details>
+                        <details>
+                            <summary>どのマスを優先して踏むべき？</summary>
+                            <p>
+                                特訓マス（虹）、2倍マス、3倍マス、カードマスが優先です。
+                                試合マスの手前では大きいカードを使うと、効率よく進めやすくなります。
+                            </p>
+                        </details>
+                    </section>
+
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-check-circle section-title-icon"></i>まとめ：迷ったら「最高難易度・イベントマス・自然回復」</h2>
+                        </div>
+                        <p>
+                            育星ストリートは、<strong>最高難易度を選ぶ</strong>、<strong>イベントマスを踏む</strong>、<strong>スターナインスコアを意識する</strong>、
+                            この3つを押さえるだけでかなり進めやすくなります。
+                            さらに、スペシャルカードや倍マスの使い方を覚えると、同じ時間でも結果が大きく変わります。
+                        </p>
+                        <div class="bubble warn">
+                            <div class="label">最重要</div>
+                            <p>
+                                報酬だけを狙うなら、無理に全自操作へ寄せなくても大丈夫です。
+                                「毎日少しずつ」「自然回復を逃さない」この2つで十分に戦えます。
+                            </p>
+                        </div>
+                    </section>
+
                 </div>
 
-                <!-- Sidebar -->
                 <aside class="sidebar">
-                    <div class="widget gacha-history-widget">
-                        <h3 class="widget-title">イベントスケジュール</h3>
-                        <ul class="gacha-history-list">
-                            <li><a href="#">サクッと！育星ストリート</a> <span class="date">12/12～12/19</span></li>
-                            <li><a href="#">次回イベント予定</a> <span class="date">未定</span></li>
-                            <li><a href="#">必勝アリーナ</a> <span class="date">未定</span></li>
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">関連記事</h3>
+                        <ul class="sidebar-list">
+                            <li><a href="gacha.html">最新ガチャ情報</a></li>
+                            <li><a href="players.html">最強選手ランキング</a></li>
+                            <li><a href="events.html">イベント一覧</a></li>
                         </ul>
                     </div>
-
-                    <div class="widget ad-widget">
-                        <h3 class="widget-title">広告</h3>
-                        <script src="https://adm.shinobi.jp/s/9f7c5790f90bc5c18ae58819a422f5af"></script>
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">このページの要点</h3>
+                        <p class="small-note" style="margin:0;">
+                            ・開催期間は 4/1 15:00〜4/7 14:59<br>
+                            ・最高難易度は VERY HARD<br>
+                            ・スターナインスコアとイベントマスを重視<br>
+                            ・自然回復を軸に進める
+                        </p>
                     </div>
                 </aside>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>サイト情報</h4>
-                    <ul>
-                        <li><a href="about.html">サイトについて</a></li>
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 プロスピA攻略サイト. All rights reserved.</p>
-                <p><small>※当サイトは個人が運営する非公式ファンサイトです。公式とは一切関係ありません。</small></p>
-            </div>
+            <p>&copy; 2026 プロスピA攻略サイト All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
