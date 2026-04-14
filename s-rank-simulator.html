@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWTXYJ505H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FWTXYJ505H');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="【プロスピA】Sランクシミュレーター2026｜10連でSランクが何連目に出るかを10,000回シミュレーション。排出率2.5%の理論値と実測を比較し、平均・中央値・最頻値・分布・累積確率を見やすく表示。">
+  <meta name="keywords" content="プロスピA, Sランクシミュレーター, ガチャシミュレーター, 排出率, 10連, 統計, 平均, 中央値, 分布">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:title" content="【プロスピA】Sランクシミュレーター2026｜10連排出率を統計で確認">
+  <meta property="og:description" content="10,000回シミュレーションでSランクの出現連数を可視化。平均・中央値・最頻値・ヒストグラム・累積確率を比較できます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://purosupi-a.f5.si/s-rank-simulator.html">
+  <meta property="og:image" content="/picture/s-rank-simulator.jpg">
+
+  <title>【プロスピA】Sランクシミュレーター2026｜10連排出率を統計で確認</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    .sim-shell {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .sim-hero {
+      text-align: center;
+      padding: 1.4rem 1.2rem 0.8rem;
+    }
+
+    .sim-emoji {
+      font-size: 54px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .sim-title {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      margin: 0 0 0.6rem;
+    }
+
+    .sim-subtitle {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      line-height: 1.9;
+      margin: 0 auto 1.2rem;
+      max-width: 760px;
+    }
+
+    .sim-bubble {
+      position: relative;
+      background: #f6f9ff;
+      border: 1px solid #d8e6ff;
+      border-radius: 18px;
+      padding: 1rem 1.15rem;
+      margin: 1rem 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .sim-bubble::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 22px;
+      width: 16px;
+      height: 16px;
+      background: inherit;
+      border-left: 1px solid #d8e6ff;
+      border-top: 1px solid #d8e6ff;
+      transform: rotate(45deg);
+    }
+
+    .sim-bubble-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: #1d4ed8;
+      background: #e8f0ff;
+      border-radius: 999px;
+      padding: .25rem .6rem;
+      margin-bottom: .7rem;
+    }
+
+    .sim-bubble p {
+      margin: 0;
+      line-height: 1.9;
+      color: var(--color-text-primary);
+    }
+
+    .sim-card {
+      background: var(--color-background-secondary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .sim-center {
+      text-align: center;
+    }
+
+    .sim-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      font-size: 15px;
+      padding: 13px 26px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      background: linear-gradient(135deg, #7F77DD, #5f57d6);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(127,119,221,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    .sim-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(127,119,221,0.3);
+    }
+
+    .sim-btn:active {
+      transform: translateY(0);
+      opacity: 0.95;
+    }
+
+    .sim-btn.secondary {
+      background: #fff;
+      color: var(--color-text-primary);
+      border: 1px solid var(--color-border-tertiary);
+      box-shadow: none;
+      font-weight: 600;
+    }
+
+    .sim-muted {
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+      line-height: 1.8;
+    }
+
+    .sim-progress-wrap {
+      background: var(--color-background-primary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: 999px;
+      height: 10px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7F77DD, #4f46e5);
+      border-radius: 999px;
+      transition: width 0.12s;
+    }
+
+    .sim-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .sim-stat {
+      background: var(--color-background-primary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: 14px;
+      padding: 0.9rem 0.7rem;
+      text-align: center;
+    }
+
+    .sim-stat .label {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      margin-bottom: 4px;
+    }
+
+    .sim-stat .value {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--color-text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sim-stat.max .value,
+    .sim-stat.max-live .value {
+      color: #D85A30;
+    }
+
+    .sim-stat.min .value {
+      color: #1D9E75;
+    }
+
+    .sim-note-box {
+      background: var(--color-background-primary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      text-align: center;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .sim-note-box span {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      transition: opacity 0.3s;
+    }
+
+    .sim-section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-text-primary);
+      margin: 0 0 0.9rem;
+    }
+
+    .sim-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .sim-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .sim-table-box {
+      background: var(--color-background-secondary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+    }
+
+    .sim-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .sim-table thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--color-text-secondary);
+      font-size: 12px;
+      border-bottom: 0.5px solid var(--color-border-tertiary);
+    }
+
+    .sim-table tbody td {
+      padding: 9px 14px;
+      border-bottom: 0.5px solid var(--color-border-tertiary);
+      color: var(--color-text-primary);
+      vertical-align: top;
+    }
+
+    .sim-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .sim-chart-wrap {
+      position: relative;
+      width: 100%;
+      margin-bottom: 1.8rem;
+    }
+
+    .sim-chart-wrap.hist { height: 280px; }
+    .sim-chart-wrap.cdf { height: 260px; }
+    .sim-chart-wrap.milestone { height: 320px; }
+
+    .sim-section {
+      margin-bottom: 1rem;
+    }
+
+    .sim-meta {
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+      margin-bottom: 0.6rem;
+    }
+
+    .sim-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .sim-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4338ca;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .sim-faq details {
+      margin-bottom: 0.8rem;
+    }
+
+    .sim-faq summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--color-text-primary);
+    }
+
+    .sim-faq p {
+      color: var(--color-text-secondary);
+      line-height: 1.9;
+      margin: 0.65rem 0 0;
+    }
+
+    .sim-empty {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--color-text-tertiary);
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #ball {
+      animation: rotate 3s linear infinite;
+    }
+
+    #s-res {
+      animation: fadeIn 0.4s ease;
+    }
+
+    @media (max-width: 900px) {
+      .sim-grid-2,
+      .sim-grid-3,
+      .sim-stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html"><h1>プロスピA攻略</h1></a>
+        </div>
+        <nav class="nav-desktop">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">ホーム</a></li>
+            <li><a href="gacha.html" class="nav-link">ガチャ情報</a></li>
+            <li><a href="players.html" class="nav-link">選手評価</a></li>
+            <li><a href="events.html" class="nav-link">イベント</a></li>
+            <li><a href="guides.html" class="nav-link active">攻略ガイド</a></li>
+            <li><a href="beginner.html" class="nav-link">初心者向け</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <ul class="nav-mobile-list">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="gacha.html">ガチャ情報</a></li>
+        <li><a href="players.html">選手評価</a></li>
+        <li><a href="events.html">イベント</a></li>
+        <li><a href="guides.html">攻略ガイド</a></li>
+        <li><a href="beginner.html">初心者向け</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav class="breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="guides.html">攻略ガイド</a></li>
+        <li>Sランクシミュレーター</li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">プロスピ Sランクシミュレーター</h1>
+      <p class="page-subtitle">
+        排出率 2.5% の10連を10,000回シミュレーションし、Sランクが何連目に出るかを統計で見やすく表示します。
+        平均・中央値・最頻値・分布・累積確率まで一画面で確認できます。
+      </p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="main-content sim-shell">
+          <section class="section">
+            <div class="sim-hero">
+              <div id="ball" class="sim-emoji">⚾</div>
+              <div class="sim-title">プロスピ Sランクシミュレーター</div>
+              <div class="sim-subtitle">
+                排出率 <strong>2.5%</strong>（10連あたり約22.4%）／ 10連専用。<br>
+                1万回まわして、本当にどれくらいで出るのかを数字で確認できます。
+              </div>
+
+              <div class="sim-bubble">
+                <div class="sim-bubble-label">使い方</div>
+                <p>
+                  まずは開始ボタンを押すだけでOKです。
+                  途中経過の平均や最長記録もリアルタイムで見られるので、
+                  「どれくらい沼るのか」も感覚ではなく数字で分かります。
+                </p>
+              </div>
+
+              <button onclick="startSim()" class="sim-btn">
+                <i class="fas fa-play"></i>
+                シミュレーション開始
+              </button>
+              <div class="sim-muted" style="margin-top:1.1rem;">石は1ミリも消費しません</div>
+            </div>
+          </section>
+
+          <div id="app" style="padding:0.5rem 0;">
+            <div id="s-sim" style="display:none;">
+              <section class="section">
+                <div class="sim-center" style="margin-bottom:1.2rem;">
+                  <div class="sim-meta" style="letter-spacing:0.12em;">SIMULATING</div>
+                  <div id="live-count" style="font-size:44px;font-weight:800;line-height:1;color:var(--color-text-primary);font-variant-numeric:tabular-nums;">0</div>
+                  <div class="sim-muted">/ 10,000 シミュレーション完了</div>
+                </div>
+
+                <div class="sim-progress-wrap">
+                  <div id="progress-bar" class="sim-progress-bar"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--color-text-tertiary);margin-bottom:1.2rem;">
+                  <span id="progress-text">0 / 10,000</span>
+                  <span id="progress-pct">0%</span>
+                </div>
+
+                <div class="sim-stats-grid">
+                  <div class="sim-stat">
+                    <div class="label">現在の平均</div>
+                    <div id="live-mean" class="value">—</div>
+                  </div>
+                  <div class="sim-stat">
+                    <div class="label">現在の中央値</div>
+                    <div id="live-med" class="value">—</div>
+                  </div>
+                  <div class="sim-stat max-live">
+                    <div class="label">最長記録</div>
+                    <div id="live-max" class="value">—</div>
+                  </div>
+                </div>
+
+                <div class="sim-note-box">
+                  <span id="sim-msg"></span>
+                </div>
+
+                <div id="max-banner" style="text-align:center;margin-top:0.7rem;font-size:13px;font-weight:800;color:#D85A30;opacity:0;transition:opacity 0.4s;min-height:20px;"></div>
+              </section>
+            </div>
+
+            <div id="s-res" style="display:none;">
+              <section class="section">
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:0.2rem 0 1rem;">
+                  <div>
+                    <div class="sim-title" style="font-size:1.2rem;margin:0;">シミュレーション結果</div>
+                    <div class="sim-meta">10,000回 ／ 排出率2.5% ／ 10連専用</div>
+                  </div>
+                  <button onclick="restart()" class="sim-btn secondary">
+                    <i class="fas fa-rotate-right"></i>
+                    もう一度
+                  </button>
+                </div>
+
+                <div class="sim-grid-3" style="margin-bottom:1rem;">
+                  <div class="sim-stat">
+                    <div class="label">平均</div>
+                    <div id="stat-mean" class="value">—</div>
+                  </div>
+                  <div class="sim-stat">
+                    <div class="label">中央値</div>
+                    <div id="stat-median" class="value">—</div>
+                  </div>
+                  <div class="sim-stat">
+                    <div class="label">最頻値</div>
+                    <div id="stat-mode" class="value">—</div>
+                  </div>
+                  <div class="sim-stat min">
+                    <div class="label">最小</div>
+                    <div id="stat-min" class="value">—</div>
+                  </div>
+                  <div class="sim-stat max">
+                    <div class="label">最大</div>
+                    <div id="stat-max" class="value">—</div>
+                  </div>
+                  <div class="sim-stat">
+                    <div class="label">標準偏差</div>
+                    <div id="stat-std" class="value">—</div>
+                  </div>
+                </div>
+
+                <div class="sim-section">
+                  <div class="sim-section-title">何連以内にSランクが出る確率</div>
+                  <div id="prob-bars" style="display:flex;flex-direction:column;gap:10px;"></div>
+                </div>
+
+                <div class="sim-section">
+                  <div class="sim-section-title">連数の分布（ヒストグラム）</div>
+                  <div class="sim-meta">30連以下 / 40〜70連 / 80〜130連 / 140連〜 の目安で色分けしています。</div>
+                  <div class="sim-chart-wrap hist">
+                    <canvas id="chart-hist" role="img" aria-label="Sランクを引くまでの連数分布ヒストグラム"></canvas>
+                  </div>
+                </div>
+
+                <div class="sim-section">
+                  <div class="sim-section-title">累積確率曲線</div>
+                  <div class="sim-meta">X連引けばY%の人がSランクを入手できる、という見方ができます。</div>
+                  <div class="sim-chart-wrap cdf">
+                    <canvas id="chart-cdf" role="img" aria-label="Sランク取得の累積確率曲線"></canvas>
+                  </div>
+                </div>
+
+                <div class="sim-section">
+                  <div class="sim-section-title">マイルストーン達成率</div>
+                  <div class="sim-meta">90%超 / 50%超 / 50%未満 でざっくり把握できます。</div>
+                  <div class="sim-chart-wrap milestone">
+                    <canvas id="chart-milestone" role="img" aria-label="各連数マイルストーンでSランクを取得した割合"></canvas>
+                  </div>
+                </div>
+
+                <div class="sim-section">
+                  <div class="sim-section-title">パーセンタイル詳細</div>
+                  <div class="sim-table-box">
+                    <table class="sim-table">
+                      <thead>
+                        <tr>
+                          <th>パーセンタイル</th>
+                          <th style="text-align:center;">連数</th>
+                          <th style="text-align:right;">意味</th>
+                        </tr>
+                      </thead>
+                      <tbody id="ptable"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="sim-section">
+                  <div class="sim-section-title">理論値 vs シミュレーション</div>
+                  <div class="sim-table-box">
+                    <table class="sim-table">
+                      <thead>
+                        <tr>
+                          <th>指標</th>
+                          <th style="text-align:center;">理論値</th>
+                          <th style="text-align:right;">シミュレーション</th>
+                        </tr>
+                      </thead>
+                      <tbody id="ttable"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="sim-bubble sim-bubble-note">
+                  <div class="sim-bubble-label">見方のコツ</div>
+                  <p>
+                    10連1回で出る確率は低く見えますが、回数を重ねると一気に上がります。
+                    どの連数帯で何％くらいの人が引けるのかを見ると、ガチャ計画が立てやすくなります。
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div id="s-start">
+              <section class="section">
+                <div class="sim-empty">
+                  <div style="font-size:13px;color:var(--color-text-tertiary);letter-spacing:0.12em;margin-bottom:0.4rem;">READY</div>
+                  <div style="font-size:14px;color:var(--color-text-secondary);line-height:1.8;">
+                    上のボタンを押すと、結果がここに表示されます。
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="section">
+            <h2 class="section-title"><i class="fas fa-circle-question section-title-icon"></i>このシミュレーターのポイント</h2>
+            <div class="sim-grid-2">
+              <div class="sim-bubble">
+                <div class="sim-bubble-label">ポイント</div>
+                <p>平均だけでなく、中央値や最頻値を見ると「実際にどれくらいで出やすいか」が分かりやすくなります。</p>
+              </div>
+              <div class="sim-bubble sim-bubble-note">
+                <div class="sim-bubble-label">ポイント</div>
+                <p>ヒストグラムを見ると、沼りやすい連数帯と、比較的早く出る連数帯の差がひと目で見えます。</p>
+              </div>
+            </div>
+
+            <div class="sim-pill-row">
+              <span class="sim-pill">10連専用</span>
+              <span class="sim-pill">10,000回統計</span>
+              <span class="sim-pill">理論値比較</span>
+              <span class="sim-pill">分布表示</span>
+              <span class="sim-pill">累積確率</span>
+            </div>
+          </section>
+
+          <section class="section sim-faq">
+            <h2 class="section-title"><i class="fas fa-question-circle section-title-icon"></i>よくある質問（FAQ）</h2>
+            <details>
+              <summary>1回ずつの単発ではなく10連にしているのはなぜ？</summary>
+              <p>
+                10連の方が実際のガチャ感覚に近く、まとめて回したときの出やすさもイメージしやすいからです。
+                10連あたりの確率を基準に見ると、計画も立てやすくなります。
+              </p>
+            </details>
+            <details>
+              <summary>シミュレーション結果は毎回同じですか？</summary>
+              <p>
+                いいえ。乱数を使っているので、毎回少しずつ結果が変わります。
+                ただし、10,000回まわすので全体の傾向はかなり安定します。
+              </p>
+            </details>
+            <details>
+              <summary>理論値とシミュレーションに差が出るのはなぜ？</summary>
+              <p>
+                シミュレーションは乱数による実測なので、回数によって少しぶれます。
+                回数を増やすほど理論値に近づいていきます。
+              </p>
+            </details>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">関連記事</h3>
+            <ul class="sidebar-list">
+              <li><a href="gacha.html">最新ガチャ情報</a></li>
+              <li><a href="players.html">最強選手ランキング</a></li>
+              <li><a href="energy-save.html">エナジー貯め方</a></li>
+              <li><a href="guides.html">攻略ガイド一覧</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">使い方のコツ</h3>
+            <p style="line-height:1.8; margin:0;">
+              平均だけで判断せず、中央値と分布も見るとかなり実感に近い見方ができます。
+              ガチャ前の気分確認にも使いやすいです。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 プロスピA攻略サイト All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script>
+    const TOTAL = 10000, RATE = 0.025, PULLS = 10;
+    const P_SET = 1 - Math.pow(1 - RATE, PULLS);
+    const MSGS = [
+      "石を砕いています...",
+      "SRしか出ていません...",
+      "連続スカ記録を更新中...",
+      "課金額を試算中...",
+      "リセマラ継続中...",
+      "スマホの画面が割れそう...",
+      "同じSRが5枚目です...",
+      "「もう1回だけ」ループ中...",
+      "天井まで遠い...",
+      "心が折れかけています...",
+      "「今日こそ出る」と祈っています...",
+      "石が消えていきます...",
+      "祈祷師を呼びました...",
+      "スマホを振ってみています...",
+      "ガチャ神に捧げ物をしています...",
+      "なぜ出ないのか分析中...",
+      "財布の中身を確認しています...",
+      "友達に石を借りています..."
+    ];
+
+    let results = [];
+    let msgTimer = null, msgIdx = 0;
+    let chartH = null, chartC = null, chartM = null;
+
+    function setMsg(el) {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.textContent = MSGS[msgIdx++ % MSGS.length];
+        el.style.opacity = '1';
+      }, 280);
+    }
+
+    function startSim() {
+      document.getElementById('s-start').style.display = 'none';
+      document.getElementById('s-sim').style.display = 'block';
+
+      const msgEl = document.getElementById('sim-msg');
+      msgEl.style.transition = 'opacity 0.28s';
+      setMsg(msgEl);
+      msgTimer = setInterval(() => setMsg(msgEl), 2800);
+
+      runSim();
+    }
+
+    function runSim() {
+      results = [];
+      let done = 0, runSum = 0, curMax = 0;
+
+      const pb = document.getElementById('progress-bar');
+      const pt = document.getElementById('progress-text');
+      const pp = document.getElementById('progress-pct');
+      const lc = document.getElementById('live-count');
+      const lm = document.getElementById('live-mean');
+      const ld = document.getElementById('live-med');
+      const lx = document.getElementById('live-max');
+      const bn = document.getElementById('max-banner');
+
+      function batch() {
+        for (let i = 0; i < 400 && done < TOTAL; i++) {
+          let pulls = 0, got = false;
+          while (!got) {
+            pulls += PULLS;
+            for (let j = 0; j < PULLS; j++) {
+              if (Math.random() < RATE) {
+                got = true;
+                break;
+              }
+            }
+          }
+          results.push(pulls);
+          runSum += pulls;
+          done++;
+
+          if (pulls > curMax) {
+            curMax = pulls;
+            if (done > 200) {
+              bn.textContent = `新記録更新... ${pulls}連目まで出なかった猛者が`;
+              bn.style.opacity = '1';
+              clearTimeout(bn._t);
+              bn._t = setTimeout(() => { bn.style.opacity = '0'; }, 2000);
+            }
+          }
+        }
+
+        const pct = done / TOTAL;
+        pb.style.width = (pct * 100).toFixed(1) + '%';
+        pt.textContent = `${done.toLocaleString()} / ${TOTAL.toLocaleString()}`;
+        pp.textContent = Math.round(pct * 100) + '%';
+        lc.textContent = done.toLocaleString();
+
+        if (done > 0) {
+          lm.textContent = (runSum / done).toFixed(1) + '連';
+          const s = [...results].sort((a, b) => a - b);
+          ld.textContent = s[Math.floor(done / 2)] + '連';
+          lx.textContent = curMax + '連';
+        }
+
+        if (done < TOTAL) {
+          requestAnimationFrame(batch);
+        } else {
+          clearInterval(msgTimer);
+          setTimeout(showResults, 400);
+        }
+      }
+
+      requestAnimationFrame(batch);
+    }
+
+    function stats() {
+      const n = results.length;
+      const sorted = [...results].sort((a, b) => a - b);
+      const sum = results.reduce((a, b) => a + b, 0);
+      const mean = sum / n;
+      const variance = results.reduce((s, x) => s + (x - mean) ** 2, 0) / n;
+      const std = Math.sqrt(variance);
+
+      const freq = {};
+      results.forEach(v => freq[v] = (freq[v] || 0) + 1);
+
+      let mode = sorted[0], modeCount = 0;
+      Object.entries(freq).forEach(([k, v]) => {
+        if (v > modeCount) {
+          modeCount = v;
+          mode = +k;
+        }
+      });
+
+      const gp = p => sorted[Math.floor(n * p)];
+      const within = lim => results.filter(v => v <= lim).length / n * 100;
+
+      return {
+        n, mean, std, mode, min: sorted[0], max: sorted[n - 1],
+        p25: gp(0.25), p50: gp(0.50), p75: gp(0.75), p90: gp(0.90), p95: gp(0.95), p99: gp(0.99),
+        sorted,
+        w10: within(10),
+        w20: within(20),
+        w30: within(30),
+        w50: within(50),
+        w100: within(100),
+        w200: within(200)
+      };
+    }
+
+    function fillBars(s) {
+      const ms = [
+        { label: '10連（1回）', pct: s.w10, color: '#7F77DD' },
+        { label: '20連（2回）', pct: s.w20, color: '#7F77DD' },
+        { label: '30連（3回）', pct: s.w30, color: '#1D9E75' },
+        { label: '50連（5回）', pct: s.w50, color: '#1D9E75' },
+        { label: '100連（10回）', pct: s.w100, color: '#BA7517' },
+        { label: '200連（20回）', pct: s.w200, color: '#D85A30' },
+      ];
+
+      document.getElementById('prob-bars').innerHTML = ms.map(m => `
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+            <span style="color:var(--color-text-secondary);">${m.label}</span>
+            <span style="font-weight:700;color:var(--color-text-primary);">${m.pct.toFixed(1)}%</span>
+          </div>
+          <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:4px;height:8px;overflow:hidden;">
+            <div style="height:100%;width:${m.pct}%;background:${m.color};border-radius:4px;"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function fillPtable(s) {
+      const rows = [
+        { l: '25%', v: s.p25, n: '4人に1人はここまでに入手' },
+        { l: '50%（中央値）', v: s.p50, n: '2人に1人はここまでに入手' },
+        { l: '75%', v: s.p75, n: '4人に3人はここまでに入手' },
+        { l: '90%', v: s.p90, n: '10人に9人はここまでに入手' },
+        { l: '95%', v: s.p95, n: '20人に19人はここまでに入手' },
+        { l: '99%', v: s.p99, n: '100人に99人はここまでに入手' },
+      ];
+
+      document.getElementById('ptable').innerHTML = rows.map((r, i) => `
+        <tr style="${i < rows.length - 1 ? 'border-bottom:0.5px solid var(--color-border-tertiary);' : ''}">
+          <td style="padding:9px 14px;color:var(--color-text-secondary);">${r.l}</td>
+          <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--color-text-primary);">${r.v}連</td>
+          <td style="padding:9px 14px;text-align:right;font-size:11px;color:var(--color-text-tertiary);">${r.n}</td>
+        </tr>
+      `).join('');
+    }
+
+    function fillTtable(s) {
+      const thMean = (PULLS / P_SET).toFixed(1) + '連';
+      const thMed = Math.ceil(Math.log(0.5) / Math.log(1 - P_SET)) * PULLS + '連';
+      const thStd = (Math.sqrt((1 - P_SET) / P_SET ** 2) * PULLS).toFixed(1) + '連';
+
+      const rows = [
+        { l: '平均', th: thMean, sim: s.mean.toFixed(1) + '連' },
+        { l: '中央値', th: thMed, sim: s.p50 + '連' },
+        { l: '標準偏差', th: thStd, sim: s.std.toFixed(1) + '連' },
+        { l: '10連以内の確率', th: (P_SET * 100).toFixed(1) + '%', sim: s.w10.toFixed(1) + '%' },
+        { l: '30連以内の確率', th: ((1 - (1 - P_SET) ** 3) * 100).toFixed(1) + '%', sim: s.w30.toFixed(1) + '%' },
+        { l: '100連以内の確率', th: ((1 - (1 - P_SET) ** 10) * 100).toFixed(1) + '%', sim: s.w100.toFixed(1) + '%' },
+      ];
+
+      document.getElementById('ttable').innerHTML = rows.map((r, i) => `
+        <tr style="${i < rows.length - 1 ? 'border-bottom:0.5px solid var(--color-border-tertiary);' : ''}">
+          <td style="padding:9px 14px;color:var(--color-text-secondary);">${r.l}</td>
+          <td style="padding:9px 14px;text-align:center;color:var(--color-text-tertiary);">${r.th}</td>
+          <td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--color-text-primary);">${r.sim}</td>
+        </tr>
+      `).join('');
+    }
+
+    function buildCharts() {
+      if (chartH) chartH.destroy();
+      if (chartC) chartC.destroy();
+      if (chartM) chartM.destroy();
+
+      const hL = [], hD = [], hC = [];
+      for (let b = 10; b <= 200; b += 10) {
+        hL.push(b + '連');
+        hD.push(results.filter(v => v >= b && v < b + 10).length);
+        hC.push(b <= 30 ? '#7F77DD' : b <= 70 ? '#1D9E75' : b <= 130 ? '#BA7517' : '#D85A30');
+      }
+      hL.push('200超');
+      hD.push(results.filter(v => v > 200).length);
+      hC.push('#993C1D');
+
+      chartH = new Chart(document.getElementById('chart-hist'), {
+        type: 'bar',
+        data: {
+          labels: hL,
+          datasets: [{
+            data: hD,
+            backgroundColor: hC,
+            borderWidth: 0,
+            borderRadius: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: c => `${c.raw.toLocaleString()}人 (${(c.raw / TOTAL * 100).toFixed(1)}%)`
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { autoSkip: true, maxRotation: 45, font: { size: 10 }, color: '#888780' },
+              grid: { display: false }
+            },
+            y: {
+              ticks: { color: '#888780', font: { size: 11 } },
+              grid: { color: 'rgba(136,135,128,0.15)' }
+            }
+          }
+        }
+      });
+
+      const cL = [], cD = [];
+      for (let x = 10; x <= 300; x += 10) {
+        cL.push(x + '連');
+        cD.push(parseFloat((results.filter(v => v <= x).length / TOTAL * 100).toFixed(2)));
+      }
+
+      chartC = new Chart(document.getElementById('chart-cdf'), {
+        type: 'line',
+        data: {
+          labels: cL,
+          datasets: [{
+            data: cD,
+            borderColor: '#7F77DD',
+            backgroundColor: 'rgba(127,119,221,0.1)',
+            fill: true,
+            tension: 0.35,
+            pointRadius: 0,
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: c => `${cL[c.dataIndex]}以内: ${c.raw}%の人が入手`
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { autoSkip: true, maxRotation: 45, font: { size: 10 }, color: '#888780' },
+              grid: { color: 'rgba(136,135,128,0.15)' }
+            },
+            y: {
+              min: 0,
+              max: 100,
+              ticks: { color: '#888780', font: { size: 11 }, callback: v => v + '%' },
+              grid: { color: 'rgba(136,135,128,0.15)' }
+            }
+          }
+        }
+      });
+
+      const mL = ['10連', '20連', '30連', '50連', '100連', '150連', '200連'];
+      const mV = [10, 20, 30, 50, 100, 150, 200];
+      const mD = mV.map(v => parseFloat((results.filter(x => x <= v).length / TOTAL * 100).toFixed(1)));
+
+      chartM = new Chart(document.getElementById('chart-milestone'), {
+        type: 'bar',
+        data: {
+          labels: mL,
+          datasets: [{
+            data: mD,
+            backgroundColor: mD.map(v => v >= 90 ? '#1D9E75' : v >= 50 ? '#7F77DD' : '#BA7517'),
+            borderWidth: 0,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: c => `${c.raw}% の人が${mL[c.dataIndex]}以内に入手`
+              }
+            }
+          },
+          scales: {
+            x: {
+              min: 0,
+              max: 100,
+              ticks: { color: '#888780', font: { size: 11 }, callback: v => v + '%' },
+              grid: { color: 'rgba(136,135,128,0.15)' }
+            },
+            y: {
+              ticks: { color: '#888780', font: { size: 12 } },
+              grid: { display: false }
+            }
+          }
+        }
+      });
+    }
+
+    function showResults() {
+      document.getElementById('s-sim').style.display = 'none';
+      document.getElementById('s-res').style.display = 'block';
+
+      const s = stats();
+      document.getElementById('stat-mean').textContent = s.mean.toFixed(1) + '連';
+      document.getElementById('stat-median').textContent = s.p50 + '連';
+      document.getElementById('stat-mode').textContent = s.mode + '連';
+      document.getElementById('stat-min').textContent = s.min + '連';
+      document.getElementById('stat-max').textContent = s.max + '連';
+      document.getElementById('stat-std').textContent = s.std.toFixed(1) + '連';
+
+      fillBars(s);
+      fillPtable(s);
+      fillTtable(s);
+      setTimeout(() => buildCharts(), 100);
+    }
+
+    function restart() {
+      results = [];
+      msgIdx = 0;
+
+      if (chartH) { chartH.destroy(); chartH = null; }
+      if (chartC) { chartC.destroy(); chartC = null; }
+      if (chartM) { chartM.destroy(); chartM = null; }
+
+      document.getElementById('s-res').style.display = 'none';
+      document.getElementById('s-sim').style.display = 'none';
+      document.getElementById('s-start').style.display = 'block';
+
+      ['prob-bars', 'ptable', 'ttable'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = '';
+      });
+
+      document.getElementById('progress-bar').style.width = '0%';
+      document.getElementById('progress-text').textContent = '0 / 10,000';
+      document.getElementById('progress-pct').textContent = '0%';
+      document.getElementById('live-count').textContent = '0';
+      document.getElementById('live-mean').textContent = '—';
+      document.getElementById('live-med').textContent = '—';
+      document.getElementById('live-max').textContent = '—';
+      document.getElementById('max-banner').style.opacity = '0';
+      document.getElementById('sim-msg').textContent = '';
+      clearInterval(msgTimer);
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
