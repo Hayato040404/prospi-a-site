@@ -2,36 +2,230 @@
 <html lang="ja">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWTXYJ505H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWTXYJ505H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FWTXYJ505H');
+    </script>
 
-  gtag('config', 'G-FWTXYJ505H');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="【2026年最新】プロスピAのホームランダービーライバルズ攻略情報を詳しく解説。効率的な進め方や累計Sランク契約書の獲得方法、ライバル攻略のコツまで完全網羅。自然回復で終わるか、エナジー消費の目安も紹介。">
-    <meta name="keywords" content="プロスピA,イベント,攻略,累計,ホームランダービー,ライバルズ,ホームランpt,効率,報酬,Sランク契約書">
+    <meta name="description" content="【2026年5月最新】プロスピAのホームランダービーライバルズ攻略情報を詳しく解説。開催期間、累計Sランク契約書、エナジー66個、3倍試合の扱い、自然回復完走、超級周回、ビッグチャンスの活用まで最新仕様でまとめた完全ガイド。">
+    <meta name="keywords" content="プロスピA,イベント,攻略,累計,ホームランダービー,ライバルズ,ホームランpt,効率,報酬,Sランク契約書,自然回復,超級,ビッグチャンス">
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <title>【プロスピA】ホームランダービーライバルズ攻略｜効率的な累計回収とコツ - プロスピA攻略サイト</title>
-    
+    <title>【プロスピA】ホームランダービーライバルズ攻略｜最新仕様で効率的に累計回収 - プロスピA攻略サイト</title>
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root{
+            --bg:#f5f7fb;
+            --card:#ffffff;
+            --text:#1f2937;
+            --muted:#5b6472;
+            --line:#e5eaf2;
+            --accent:#c8102e;
+            --shadow:0 10px 30px rgba(15,23,42,.06);
+            --radius:18px;
+            --blue-soft:#f3f8ff;
+            --blue-line:#cfe0ff;
+            --yellow-soft:#fff7e6;
+            --yellow-line:#ffd28a;
+            --green-soft:#edfdf3;
+            --green-line:#bdeccd;
+        }
+        html{scroll-behavior:smooth;}
+        body{
+            font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.95;
+            letter-spacing:.02em;
+            -webkit-font-smoothing:antialiased;
+            text-rendering:optimizeLegibility;
+        }
+        .container{width:min(1120px,calc(100% - 32px));margin:0 auto;}
+        .main{padding:18px 0 56px;}
+        .content-wrapper{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start;}
+        .main-content{min-width:0;}
+        .sidebar{position:sticky;top:16px;}
+        .page-header{padding:26px 0 8px;}
+        .page-title{font-size:clamp(1.9rem,4vw,3rem);line-height:1.2;font-weight:900;letter-spacing:.01em;margin:0 0 12px;}
+        .page-subtitle{
+            font-size:1.02rem;color:var(--muted);max-width:920px;margin:0;
+            background:linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.94));
+            border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);
+        }
+        .section{
+            background:var(--card);
+            border:1px solid var(--line);
+            border-radius:var(--radius);
+            box-shadow:var(--shadow);
+            padding:22px 22px;
+            margin-bottom:18px;
+        }
+        .section-title{font-size:1.34rem;line-height:1.35;font-weight:900;letter-spacing:.01em;margin:0;}
+        .section-title-icon{margin-right:8px;color:var(--accent);}
+        .main-content p,.main-content li,.main-content summary,.main-content td{font-size:1.02rem;}
+        .main-content p{margin:0 0 14px;}
+        .main-content ul{padding-left:1.25rem;margin:10px 0 14px;}
+        .main-content li{margin-bottom:8px;}
+        strong{font-weight:800;color:#0f172a;}
+        .ranking-table{
+            width:100%;
+            border-collapse:separate;
+            border-spacing:0;
+            overflow:hidden;
+            border-radius:14px;
+            margin:14px 0 16px;
+            border:1px solid var(--line);
+            background:#fff;
+        }
+        .ranking-table th,.ranking-table td{
+            padding:14px 14px;
+            border-bottom:1px solid var(--line);
+            vertical-align:top;
+            text-align:left;
+            line-height:1.7;
+        }
+        .ranking-table th{background:#f8fafc;font-weight:800;}
+        .ranking-table tr:last-child td{border-bottom:0;}
+        .bubble{
+            position:relative;
+            background:#f6f9ff;
+            border:1px solid #d8e6ff;
+            border-radius:18px;
+            padding:16px 16px;
+            margin:14px 0;
+            box-shadow:0 8px 20px rgba(0,0,0,.05);
+        }
+        .bubble::before{
+            content:"";
+            position:absolute;
+            top:-8px;
+            left:22px;
+            width:16px;
+            height:16px;
+            background:inherit;
+            border-left:1px solid #d8e6ff;
+            border-top:1px solid #d8e6ff;
+            transform:rotate(45deg);
+        }
+        .bubble-label{
+            display:inline-block;
+            font-size:.78rem;
+            font-weight:800;
+            letter-spacing:.04em;
+            color:#1d4ed8;
+            background:#e8f0ff;
+            border-radius:999px;
+            padding:.25rem .6rem;
+            margin-bottom:.7rem;
+        }
+        .bubble p{margin:0;line-height:1.9;}
+        .bubble-note{background:#f4fff7;border-color:#cae9d2;}
+        .bubble-note::before{border-left-color:#cae9d2;border-top-color:#cae9d2;}
+        .bubble-note .bubble-label{color:#047857;background:#e5f9ec;}
+        .bubble-warn{background:#fff8eb;border-color:#f5d79b;}
+        .bubble-warn::before{border-left-color:#f5d79b;border-top-color:#f5d79b;}
+        .bubble-warn .bubble-label{color:#b45309;background:#fff1cf;}
+        .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+        .card{
+            border:1px solid var(--line);
+            border-radius:16px;
+            background:#fff;
+            padding:16px;
+            box-shadow:0 6px 16px rgba(15,23,42,.04);
+        }
+        .card h4{margin:0 0 8px;font-size:1.04rem;}
+        .card p{margin:0;color:var(--muted);line-height:1.8;}
+        .article-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:14px;
+        }
+        .article-card{
+            border:1px solid var(--line);
+            border-radius:18px;
+            overflow:hidden;
+            background:#fff;
+            box-shadow:var(--shadow);
+        }
+        .article-content{padding:16px;}
+        .article-content h3{margin:0 0 8px;font-size:1.08rem;}
+        .article-content p{margin:0;color:var(--muted);line-height:1.8;}
+        .sidebar-section{
+            background:#fff;
+            border:1px solid var(--line);
+            border-radius:var(--radius);
+            padding:18px;
+            box-shadow:var(--shadow);
+            margin-bottom:16px;
+        }
+        .sidebar-title{margin:0 0 12px;font-size:1.02rem;font-weight:900;}
+        .sidebar-list{margin:0;padding-left:1.1rem;}
+        .sidebar-list li{margin-bottom:8px;}
+        details{
+            border:1px solid var(--line);
+            border-radius:14px;
+            background:#fff;
+            padding:0;
+            margin-top:12px;
+            overflow:hidden;
+        }
+        summary{
+            cursor:pointer;
+            list-style:none;
+            padding:14px 16px;
+            font-weight:800;
+            background:#f8fafc;
+        }
+        details p{padding:0 16px 14px;margin:0;}
+        .source-box{
+            background:#fff;
+            border:1px solid var(--line);
+            border-radius:18px;
+            padding:16px;
+            box-shadow:var(--shadow);
+        }
+        .tag-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem;}
+        .tag{
+            display:inline-flex;
+            align-items:center;
+            padding:.35rem .65rem;
+            border-radius:999px;
+            background:#eef2ff;
+            color:#4338ca;
+            font-size:.78rem;
+            font-weight:700;
+        }
+        .footer{margin-top:20px;padding:26px 0 40px;color:var(--muted);}
+        .footer p{margin:0;text-align:center;}
+        .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+        .table-wrap .ranking-table{min-width:760px;}
+        @media (max-width:960px){
+            .content-wrapper{grid-template-columns:1fr;}
+            .sidebar{position:static;}
+        }
+        @media (max-width:720px){
+            .section{padding:18px 16px;border-radius:16px;}
+            .page-subtitle{padding:14px 14px;}
+            .ranking-table th,.ranking-table td{padding:12px 10px;font-size:.95rem;}
+            .main-content p,.main-content li,.main-content summary,.main-content td{font-size:.98rem;}
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="index.html">
-                        <h1>プロスピA攻略</h1>
-                    </a>
+                    <a href="index.html"><h1>プロスピA攻略</h1></a>
                 </div>
-                
-                <!-- Desktop Navigation -->
                 <nav class="nav-desktop">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">ホーム</a></li>
@@ -42,420 +236,239 @@
                         <li><a href="beginner.html" class="nav-link">初心者向け</a></li>
                     </ul>
                 </nav>
-                
-                <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Navigation -->
         <nav class="nav-mobile" id="mobileNav">
             <ul class="nav-mobile-list">
-                <li><a href="index.html" class="nav-mobile-link">ホーム</a></li>
-                <li><a href="gacha.html" class="nav-mobile-link">ガチャ情報</a></li>
-                <li><a href="players.html" class="nav-mobile-link">選手評価</a></li>
-                <li><a href="events.html" class="nav-mobile-link">イベント</a></li>
-                <li><a href="guides.html" class="nav-mobile-link">攻略ガイド</a></li>
-                <li><a href="beginner.html" class="nav-mobile-link">初心者向け</a></li>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="gacha.html">ガチャ情報</a></li>
+                <li><a href="players.html">選手評価</a></li>
+                <li><a href="events.html">イベント</a></li>
+                <li><a href="guides.html">攻略ガイド</a></li>
+                <li><a href="beginner.html">初心者向け</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Breadcrumb -->
     <nav class="breadcrumb">
         <div class="container">
             <ul class="breadcrumb-list">
                 <li><a href="index.html">ホーム</a></li>
-                <li>イベント攻略</li>
+                <li><a href="events.html">イベント攻略</a></li>
+                <li>ホームランダービーライバルズ</li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1 class="page-title">ホームランダービーライバルズ攻略</h1>
-            <p class="page-subtitle">【2026年1月最新】ライバル投手を倒してSランク契約書をゲット！効率的な攻略方法を徹底解説</p>
+            <p class="page-subtitle">
+                2026年5月1日最新。ホームランコストを使ってライバル投手を倒し、累計Sランク契約書まで回収するイベントです。
+                <strong>自然回復で完走可能</strong>、<strong>累計後は周回不要</strong>、<strong>3倍試合は基本非推奨</strong>という最新仕様に合わせて、効率よく進めるコツをまとめています。
+            </p>
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="main">
         <div class="container">
             <div class="content-wrapper">
-                <!-- Main Content Area -->
                 <div class="main-content">
-                    <!-- Current Events -->
-                    <section class="section current-events">
+                    <section class="section">
                         <div class="section-header">
-                            <h2 class="section-title">⚾ 開催中のイベント情報</h2>
-                            <span class="gacha-period">2026年1月2日(金)15:00～1月9日(金)14:59</span>
+                            <h2 class="section-title"><i class="fas fa-calendar-alt section-title-icon"></i>開催期間・イベント概要</h2>
                         </div>
-                        
-                        <div class="gacha-banner">
-                            <img src="/picture/IN_ev044_01ydkr.jpeg?height=300&width=800" alt="ホームランダービーライバルズ">
-                            <div class="gacha-info-overlay">
-                                <h3>ホームランダービーライバルズ</h3>
-                                <p>7球勝負でライバル投手を打ち負かせ！累計Sランク契約書あり！</p>
-                            </div>
+                        <p>
+                            ホームランダービーライバルズは、ホームランの飛距離で勝利条件を満たしていくイベントです。
+                            <strong>ホームランコスト</strong>を消費して進めます。
+                            2026年5月1日(木)15:00から5月8日(木)14:59まで開催されており、イベント自体は7日程度の短期開催です。
+                        </p>
+                        <div class="bubble">
+                            <div class="bubble-label">最新ポイント</div>
+                            <p>
+                                ホームランコストは<strong>90分で1個回復し</strong>、エナジー1個でも1回復できます。
+                                こまめに触るほど自然回復のロスが減るので、毎日少しずつ進めるのがいちばん安定します。
+                            </p>
                         </div>
+                        <p>
+                            2026年5月時点では、累計報酬の中に<strong>Sランク契約書</strong>、<strong>S特訓コーチ</strong>、<strong>A特訓コーチ</strong>、<strong>エナジー66個</strong>などが含まれています。
+                            累計を取り切ったあとに周回する必要はなく、コイン不足の人以外は無理に走らなくて大丈夫です。
+                        </p>
+                    </section>
 
-                        <div class="gacha-details">
-                            <div class="gacha-info-grid">
-                                <div class="info-card">
-                                    <h4>🎁 主要報酬まとめ</h4>
-                                    <ul class="probability-list">
-                                        <li>
-                                            <span><b>Sランク契約書</b></span>
-                                            <span>累計ホームランpt報酬（180万pt）</span>
-                                        </li>
-                                        <li>
-                                            <span><b>Sランク特訓コーチ</b></span>
-                                            <span>累計初回勝利報酬（52人）</span>
-                                        </li>
-                                        <li>
-                                            <span><b>Aランク自チーム契約書</b></span>
-                                            <span>初回勝利報酬（超級BOSSなど）</span>
-                                        </li>
-                                        <li>
-                                            <span><b>合計66エナジー</b></span>
-                                            <span>全報酬合計獲得数</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="info-card">
-                                    <h4>⚡ 最速累計回収の進め方</h4>
-                                    <ul class="energy-list">
-                                        <li>
-                                            <span><b>超級を最優先で周回</b></span>
-                                            <span>ホームランptを最も多く稼げるのは超級です。解放されたら超級をメインに走りましょう。</span>
-                                        </li>
-                                        <li>
-                                            <span><b>ビッグチャンスは絶対逃さない</b></span>
-                                            <span>勝利時に獲得ptが2倍になります。発生したらエナジーを使ってでも必ず勝利しましょう。</span>
-                                        </li>
-                                        <li>
-                                            <span><b>3倍試合の使い所</b></span>
-                                            <span>時間が取れない時や、ビッグチャンスが重なった時に活用。基本は等倍でコストを回すのが効率的。</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="info-card">
-                                    <h4>📊 攻略の重要ポイント</h4>
-                                    <ul class="bonus-list">
-                                        <li>
-                                            <span><b>パワー重視の自操作選手</b></span>
-                                            <span>飛距離がスコアに直結します。アーチストやパワーヒッターの選手を必ず起用しましょう。</span>
-                                        </li>
-                                        <li>
-                                            <span><b>コンボを繋いでスコアUP</b></span>
-                                            <span>連続でホームランを打つとコンボボーナスが発生。ファウルや空振りは厳禁です。</span>
-                                        </li>
-                                        <li>
-                                            <span><b>自然回復で終わる？</b></span>
-                                            <span>毎日漏らさずコストを消費すれば、<b>自然回復のみで累計到達が可能</b>なイベントです。</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-trophy section-title-icon"></i>主要報酬一覧</h2>
+                        </div>
+                        <div class="table-wrap">
+                            <table class="ranking-table">
+                                <thead>
+                                    <tr>
+                                        <th>報酬</th>
+                                        <th>数量</th>
+                                        <th>ひとこと</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Sランク契約書</strong></td><td>1</td><td>最終目標として狙いたい報酬です。</td></tr>
+                                    <tr><td>S特訓コーチ</td><td>1</td><td>育成強化にうれしい報酬です。</td></tr>
+                                    <tr><td>A特訓コーチ</td><td>3</td><td>中盤の育成を進めやすくなります。</td></tr>
+                                    <tr><td>エナジー</td><td>66</td><td>累計報酬だけでもかなりおいしい構成です。</td></tr>
+                                    <tr><td>A契約書（自チーム）</td><td>1</td><td>自チーム補強にもつながります。</td></tr>
+                                    <tr><td>限定S契約書（ランダム）</td><td>1</td><td>おまけとしての満足度も高めです。</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bubble bubble-note">
+                            <div class="bubble-label">覚えておくこと</div>
+                            <p>
+                                特に理由がない限り<strong>累計回収を終えたら終了</strong>でOKです。
+                            </p>
                         </div>
                     </section>
 
-                    <!-- Gameplay Guide -->
-                    <section class="section gameplay-guide">
-                        <h2 class="section-title">🎮 ホームランダービーシステム徹底解説</h2>
-                        <div class="article-grid">
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/picture/IMG_6894.jpeg?height=150&width=250" alt="ライバル対戦">
-                                </div>
-                                <div class="article-content">
-                                    <h3>⚾ ライバル対戦の仕組み</h3>
-                                    <p><strong>7球勝負のガチンコ競争</strong></p>
-                                    <p>・ホームランコスト1消費でライバル投手に挑戦</p>
-                                    <p>・飛距離に応じたスコアでノルマをクリアすれば勝利</p>
-                                    <p>・残り球数に応じたボーナスptが加算されるため、早期決着が鍵</p>
-                                    <p><strong>ポイント：</strong>強振で確実にスタンドへ運び、飛距離を稼ぐことが重要です。</p>
-                                </div>
-                            </article>
-
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/picture/IMG_6896.jpeg?height=150&width=250" alt="ビッグチャンス">
-                                </div>
-                                <div class="article-content">
-                                    <h3>🌟 ビッグチャンス活用術</h3>
-                                    <p><strong>獲得ptが2倍になるボーナスタイム</strong></p>
-                                    <p>・対戦後にランダムで発生する特別ルール</p>
-                                    <p>・勝利時に獲得できるホームランptが2倍に増加</p>
-                                    <p>・発生中は「3倍試合」を併用することで、一気にptを稼げます</p>
-                                    <p><strong>注意：</strong>負けるとチャンスが消滅するため、集中して挑みましょう。</p>
-                                </div>
-                            </article>
-
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/placeholder.svg?height=150&width=250" alt="BOSS戦">
-                                </div>
-                                <div class="article-content">
-                                    <h3>👑 BOSS戦と級の解放</h3>
-                                    <p><strong>全52人のライバルを撃破せよ</strong></p>
-                                    <p>・初級、中級、上級、超級の4段階構成</p>
-                                    <p>・各級のライバル12人を倒すとBOSSが登場</p>
-                                    <p>・BOSSに勝利することで次の級が解放され、獲得ptもアップ</p>
-                                    <p><strong>戦略：</strong>まずは超級解放を最優先に進め、その後は超級をループ周回します。</p>
-                                </div>
-                            </article>
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-baseball-ball section-title-icon"></i>効率の良い攻略方法</h2>
+                        </div>
+                        <div class="grid-2">
+                            <div class="card">
+                                <h4>1. Sランクのアーチストを使う</h4>
+                                <p>
+                                    このイベントは飛距離が重要です。まずは<strong>弾道の高いSランク選手</strong>を使うのが基本で、
+                                    アーチストやパワーヒッター系の選手だとかなり安定します。
+                                </p>
+                            </div>
+                            <div class="card">
+                                <h4>2. なるべく少ない球数でクリアする</h4>
+                                <p>
+                                    勝利条件を早く満たすほどボーナスが入ります。1球でも少なく終える意識が、ptの伸びにつながります。
+                                </p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4>3. 進行どおりに進める</h4>
+                                <p>
+                                    難易度を変えてしまうと球速感覚がズレやすいです。<strong>同じ級をまとめて倒す</strong>と打ちやすさが安定します。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bubble">
+                            <div class="bubble-label">実践のコツ</div>
+                            <p>
+                                ボス戦が苦手なら、<strong>ミートアシスト</strong>を使うのも十分ありです。
+                                失敗を減らして確実に1勝ずつ積むほうが、結果的に累計回収は早くなります。
+                            </p>
                         </div>
                     </section>
 
-                    <!-- Strategy Tips -->
-                    <section class="section strategy-tips">
-                        <h2 class="section-title">💡 1万PV級の極秘攻略テクニック</h2>
-                        <div class="tips-grid">
-                            <div class="tip-card">
-                                <div class="tip-icon">⚡</div>
-                                <h4>ミートよりもパワーを優先</h4>
-                                <p>このイベントでは「安打」に価値はありません。飛距離こそが正義です。弾道が「アーチスト」「パワーヒッター」の選手を揃えましょう。</p>
-                                <p><strong>コツ：</strong>自操作に自信がない場合は、ミートも高い選手を選ぶと安定します。</p>
-                            </div>
-
-                            <div class="tip-card">
-                                <div class="tip-icon">🎯</div>
-                                <h4>ライバルの球種を予測する</h4>
-                                <p>ライバルごとに投げてくる球種はある程度決まっています。特に超級のBOSSは変化球が鋭いため、ストレートに絞って待つのが有効です。</p>
-                                <p><strong>重要：</strong>低めの球は飛距離が出にくいため、高めの球を狙い打ちしましょう。</p>
-                            </div>
-
-                            <div class="tip-card">
-                                <div class="tip-icon">📈</div>
-                                <h4>エナジー消費の目安</h4>
-                                <p>自然回復で終わるイベントですが、時間を節約したい場合は10〜20エナジー程度使うと余裕を持って終われます。</p>
-                                <p><strong>戦略：</strong>正月福袋で獲得した新戦力の試運転として周回するのもアリです。</p>
-                            </div>
-
-                            <div class="tip-card">
-                                <div class="tip-icon">🏆</div>
-                                <h4>サブミッションは無視してOK？</h4>
-                                <p>「特定の方向に打て」などのサブミッションがありますが、無理に狙って凡退するくらいなら、確実にホームランを打つ方がpt効率は良いです。</p>
-                                <p><strong>バランス：</strong>余裕がある時だけ狙う程度で問題ありません。</p>
-                            </div>
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-star section-title-icon"></i>ビッグチャンスと3倍試合</h2>
                         </div>
+                        <p>
+                            ビッグチャンスが発生すると、通常の<strong>2倍pt</strong>を獲得できます。
+                            
+                        </p>
+                        <div class="bubble bubble-note">
+                            <div class="bubble-label">おすすめ</div>
+                            <p>
+                                <strong>3倍試合は基本的に使わなくてOK</strong>です。
+                                自然回復で完走できるイベントなので、エナジーを節約したいなら等倍で十分です。
+                                時短したい時だけ、状況を見て使うくらいで問題ありません。
+                            </p>
+                        </div>
+                        <p>
+                            ビッグチャンス中はpt効率が良いので、発生したら集中して消化しましょう。
+                            ただし、負けるとチャンスが消えてしまうため、落ち着いて打つことが大事です。
+                        </p>
                     </section>
 
-                    <!-- Point Bonus System -->
-                    <section class="section point-bonus">
-                        <h2 class="section-title">💎 ホームランptボーナス選手</h2>
-                        <div class="gacha-info-grid">
-                            <div class="info-card">
-                                <h4>🌟 ボーナス値一覧</h4>
-                                <ul class="probability-list">
-                                    <li>
-                                        <span><b>Sランク選手</b></span>
-                                        <span>50%（限界突破1回につき+5%）</span>
-                                    </li>
-                                    <li>
-                                        <span><b>Aランク選手</b></span>
-                                        <span>30%（限界突破1回につき+3%）</span>
-                                    </li>
-                                    <li>
-                                        <span><b>Bランク選手</b></span>
-                                        <span>10%（限界突破1回につき+2%）</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="info-card">
-                                <h4>📊 ボーナスの仕組み</h4>
-                                <ul class="bonus-list">
-                                    <li>
-                                        <span><b>対象選手</b></span>
-                                        <span>現在開催中のガチャ（正月福袋など）から登場する選手</span>
-                                    </li>
-                                    <li>
-                                        <span><b>適用ルール</b></span>
-                                        <span>所持している対象選手のうち、ボーナス値が高い上位10名の合計が適用</span>
-                                    </li>
-                                    <li>
-                                        <span><b>最大ボーナス</b></span>
-                                        <span>限界突破を含めると、獲得ptを数倍に跳ね上げることが可能です</span>
-                                    </li>
-                                </ul>
-                            </div>
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-chart-line section-title-icon"></i>自然回復で終わる？</h2>
                         </div>
+                        <p>
+                            結論から言うと、<strong>自然回復だけで最終累計到達は可能</strong>です。
+                            しかも、チャレンジミスやコスト漏れが少なければ、イベント終了日前日あたりには完走できる見込みです。
+                        </p>
+                        <div class="bubble bubble-note">
+                            <div class="bubble-label">ポイント</div>
+                            <p>
+                                最終累計まで少し足りない時だけエナジーを使えばOKです。
+                                ふだんは自然回復で回し、足りない分だけ補う形がいちばん無駄がありません。
+                            </p>
+                        </div>
+                        <p>
+                            つまり、毎日コツコツ触れる人ほど有利です。
+                            「後でまとめてやる」よりも、ホームランコストが溢れる前に少しずつ消化する方が効率は高くなります。
+                        </p>
                     </section>
 
-                    <!-- Related Articles -->
-                    <section class="section related-articles">
-                        <h2 class="section-title">📚 併せて読みたい記事</h2>
-                        <div class="article-grid">
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/placeholder.svg?height=120&width=200" alt="ガチャ情報">
-                                </div>
-                                <div class="article-content">
-                                    <h3><a href="gacha.html">正月福袋ガチャは引くべき？</a></h3>
-                                    <p>ボーナス選手を確保してイベントを有利に進めよう。</p>
-                                    <span class="article-date">2026年1月1日</span>
-                                </div>
-                            </article>
-
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/placeholder.svg?height=120&width=200" alt="選手編成">
-                                </div>
-                                <div class="article-content">
-                                    <h3><a href="team-building.html">最強オーダー編成のコツ</a></h3>
-                                    <p>パワー重視のオーダーでホームランを量産する方法。</p>
-                                    <span class="article-date">2025年12月30日</span>
-                                </div>
-                            </article>
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-question-circle section-title-icon"></i>よくある質問（FAQ）</h2>
                         </div>
+                        <details>
+                            <summary>ホームランダービーは周回した方がいい？</summary>
+                            <p>
+                                累計報酬を回収したら、基本的に周回する必要はありません。
+                                コインが不足している人以外は、無理に追加で回る必要はないです。
+                            </p>
+                        </details>
+                        <details>
+                            <summary>強振とミートアシストはどっちがいい？</summary>
+                            <p>
+                                飛距離を稼ぎやすいのは強振です。ボス戦が苦手ならミートアシストに切り替えるのもありですが、
+                                基本は強振で打つ方がスコアを伸ばしやすいです。
+                            </p>
+                        </details>
+                        <details>
+                            <summary>どの選手を使えばいい？</summary>
+                            <p>
+                                パワーの高いSランク選手、アーチスト、パワーヒッターの選手が使いやすいです。
+                                打ちやすさを優先するなら、自分が普段から慣れている選手を優先しても大丈夫です。
+                            </p>
+                        </details>
                     </section>
+
+                    
                 </div>
 
-                <!-- Sidebar -->
                 <aside class="sidebar">
-                    <!-- Quick Info -->
-                    <div class="widget quick-info-widget">
-                        <h3 class="widget-title">⚡ イベント速報</h3>
-                        <div class="quick-info">
-                            <div class="info-item">
-                                <span class="info-label">開催イベント</span>
-                                <span class="info-value">ホームランダービーライバルズ</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">終了まで</span>
-                                <span class="info-value">あと7日</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">目玉報酬</span>
-                                <span class="info-value">Sランク契約書</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Point Bonus Calculator -->
-                    <div class="widget calculator-widget">
-                        <h3 class="widget-title">🧮 ボーナス計算機</h3>
-                        <div class="calculator">
-                            <div class="calc-input">
-                                <label>Sランク(ボーナス付):</label>
-                                <input type="number" id="sRankCount" value="0" min="0" max="10">
-                            </div>
-                            <div class="calc-input">
-                                <label>Aランク(ボーナス付):</label>
-                                <input type="number" id="aRankCount" value="0" min="0" max="10">
-                            </div>
-                            <div class="calc-result">
-                                <p>合計ボーナス: <span id="totalBonus">0</span>%</p>
-                                <p>獲得pt倍率: <span id="ptMultiplier">1.0</span>倍</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Schedule -->
-                    <div class="widget gacha-history-widget">
-                        <h3 class="widget-title">📅 今後の予定</h3>
-                        <ul class="gacha-history-list">
-                            <li><a href="#">ホームランダービーライバルズ</a> <span class="date">1/2-1/9</span></li>
-                            <li><a href="#">プロスピタワー(予想)</a> <span class="date">1/9-</span></li>
-                            <li><a href="#">B9&TH第1弾(予想)</a> <span class="date">1月下旬</span></li>
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">関連記事</h3>
+                        <ul class="sidebar-list">
+                            <li><a href="gacha.html">ガチャ情報</a></li>
+                            <li><a href="players.html">選手評価</a></li>
+                            <li><a href="guides.html">攻略ガイド一覧</a></li>
+                            <li><a href="beginner.html">初心者向け</a></li>
                         </ul>
                     </div>
-
-                    <!-- Ad Space -->
-                    <div class="widget ad-widget">
-                        <h3 class="widget-title">📢 広告</h3>
-                        <script src="https://adm.shinobi.jp/s/9f7c5790f90bc5c18ae58819a422f5af"></script>
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">この記事の要点</h3>
+                        <div class="tag-row">
+                            <span class="tag">#自然回復で完走</span>
+                            <span class="tag">#3倍試合は基本非推奨</span>
+                            <span class="tag">#超級周回</span>
+                            <span class="tag">#Sランク契約書</span>
+                            <span class="tag">#ビッグチャンス</span>
+                        </div>
                     </div>
                 </aside>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>サイト情報</h4>
-                    <ul>
-                        <li><a href="about.html">サイトについて</a></li>
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>攻略情報</h4>
-                    <ul>
-                        <li><a href="gacha.html">ガチャ情報</a></li>
-                        <li><a href="players.html">選手評価</a></li>
-                        <li><a href="events.html">イベント攻略</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>初心者向け</h4>
-                    <ul>
-                        <li><a href="beginner.html">始め方ガイド</a></li>
-                        <li><a href="reroll.html">リセマラ情報</a></li>
-                        <li><a href="tips.html">攻略のコツ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 プロスピA攻略サイト. All rights reserved.</p>
-                <p><small>※当サイトは個人運営のファンサイトであり、株式会社コナミデジタルエンタテインメントとは一切関係ありません。</small></p>
-            </div>
+            <p>&copy; 2026 プロスピA攻略サイト All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
-    <script>
-        // Point Bonus Calculator
-        document.addEventListener('DOMContentLoaded', function() {
-            const sRankCountInput = document.getElementById('sRankCount');
-            const aRankCountInput = document.getElementById('aRankCount');
-            const totalBonusSpan = document.getElementById('totalBonus');
-            const ptMultiplierSpan = document.getElementById('ptMultiplier');
-            
-            function updateCalculator() {
-                const sRankCount = parseInt(sRankCountInput.value) || 0;
-                const aRankCount = parseInt(aRankCountInput.value) || 0;
-                
-                const maxCount = 10;
-                const sRankBonus = 50;
-                const aRankBonus = 30;
-                
-                let totalBonus = 0;
-                let remainingSlots = maxCount;
-                
-                const sRankUsed = Math.min(sRankCount, remainingSlots);
-                totalBonus += sRankUsed * sRankBonus;
-                remainingSlots -= sRankUsed;
-                
-                const aRankUsed = Math.min(aRankCount, remainingSlots);
-                totalBonus += aRankUsed * aRankBonus;
-                
-                const ptMultiplier = (100 + totalBonus) / 100;
-                
-                totalBonusSpan.textContent = totalBonus;
-                ptMultiplierSpan.textContent = ptMultiplier.toFixed(1);
-            }
-            
-            if (sRankCountInput && aRankCountInput) {
-                sRankCountInput.addEventListener('input', updateCalculator);
-                aRankCountInput.addEventListener('input', updateCalculator);
-                updateCalculator();
-            }
-        });
-    </script>
 </body>
 </html>
