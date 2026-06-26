@@ -3,24 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="【プロスピA 2026最新】TS第3弾の当たり選手を独自評価で解説。熱闘スタジアムの累計報酬で入手できるSランクTS契約書(第3弾)の価値、リアタイ・リーグ・純正の使い分けまで詳しく整理。">
-  <meta name="keywords" content="プロスピA,TS第3弾,タイムスリップ第3弾,当たり選手,評価ランキング,浅村栄斗,R・マルティネス,有原航平,伊藤智仁,松中信彦,李承燁,熱闘スタジアム,TS契約書">
+  <title>【プロスピA】ドラ1セレクションの当たりランキング2026最新｜独自評価と引くべきか</title>
+  <meta name="description" content="【プロスピA 2026最新】ドラ1セレクションの当たり選手を独自評価で解説。山田哲人、清原和博、筒香嘉智、岡本和真、城島健司、藤浪晋太郎、陽岱鋼、立浪和義、有藤通世、山﨑福也、片山博視、佐々岡真司の使いどころを、リーグ・リアタイ・純正別に詳しく整理。">
+  <meta name="keywords" content="プロスピA,ドラ1セレクション,当たり選手,評価ランキング,山田哲人,清原和博,筒香嘉智,岡本和真,城島健司,藤浪晋太郎,陽岱鋼,立浪和義,有藤通世,山﨑福也,片山博視,佐々岡真司">
   <meta name="author" content="プロスピA攻略サイト">
   <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://purosupi-a.f5.si/ts-3.html">
-  <meta property="og:title" content="【プロスピA】TS第3弾の当たりランキング2026最新｜独自評価とステータス">
-  <meta property="og:description" content="TS第3弾の実装選手を、リーグ・リアタイ・純正で独自に評価。熱闘スタジアムの累計報酬で取れるTS契約書(第3弾)の価値も整理した最新ページ。">
-  <meta property="og:image" content="/picture/ts-3.jpg">
+  <meta property="og:url" content="https://purosupi-a.f5.si/draft1-selection.html">
+  <meta property="og:title" content="【プロスピA】ドラ1セレクションの当たりランキング2026最新｜独自評価と引くべきか">
+  <meta property="og:description" content="ドラ1セレクションの実装選手を、リーグ・リアタイ・純正で独自に評価。30・60・90連のSランク確定や、引くべきかまで整理した最新ページ。">
+  <meta property="og:image" content="/picture/draft1.jpg">
 
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://purosupi-a.f5.si/ts-3.html">
-  <meta property="twitter:title" content="【プロスピA】TS第3弾の当たりランキング2026最新｜独自評価とステータス">
-  <meta property="twitter:description" content="TS第3弾の実装選手を、リーグ・リアタイ・純正で独自に評価。熱闘スタジアムの累計報酬で取れるTS契約書(第3弾)の価値も整理した最新ページ。">
-  <meta property="twitter:image" content="/picture/ts-3.jpg">
-
-  <title>【プロスピA】TS第3弾の当たりランキング2026最新｜独自評価とステータス</title>
+  <meta property="twitter:url" content="https://purosupi-a.f5.si/draft1-selection.html">
+  <meta property="twitter:title" content="【プロスピA】ドラ1セレクションの当たりランキング2026最新｜独自評価と引くべきか">
+  <meta property="twitter:description" content="ドラ1セレクションの実装選手を、リーグ・リアタイ・純正で独自に評価。30・60・90連のSランク確定や、引くべきかまで整理した最新ページ。">
+  <meta property="twitter:image" content="/picture/draft1.jpg">
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
@@ -37,9 +36,6 @@
       --shadow:0 10px 30px rgba(15,23,42,.06);
       --radius:18px;
       --pink-soft:#fff0f3;
-      --blue-soft:#f3f8ff;
-      --green-soft:#edfdf3;
-      --yellow-soft:#fff7e6;
     }
     html{scroll-behavior:smooth;}
     body{
@@ -97,7 +93,6 @@
     }
     .ranking-table th{background:#f8fafc;font-weight:800;}
     .ranking-table tr:last-child td{border-bottom:0;}
-
     .bubble{
       position:relative;
       background:#f6f9ff;
@@ -137,50 +132,26 @@
     .bubble-warn{background:#fff8eb;border-color:#f5d79b;}
     .bubble-warn::before{border-left-color:#f5d79b;border-top-color:#f5d79b;}
     .bubble-warn .bubble-label{color:#b45309;background:#fff1cf;}
-
     .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
     .player-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;}
     .player-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:16px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      gap:8px;
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow);
+      display:flex;flex-direction:column;gap:8px;
     }
     .player-card .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
     .player-card .name{font-weight:900;font-size:1.06rem;line-height:1.35;}
     .player-card .team{font-size:.82rem;color:var(--muted);}
     .player-card .role{
-      display:inline-block;
-      font-size:.76rem;
-      font-weight:800;
-      color:#065f46;
-      background:#d1fae5;
-      padding:.25rem .55rem;
-      border-radius:999px;
-      white-space:nowrap;
+      display:inline-block;font-size:.76rem;font-weight:800;color:#065f46;background:#d1fae5;
+      padding:.25rem .55rem;border-radius:999px;white-space:nowrap;
     }
     .player-card .statline{font-size:.95rem;line-height:1.8;}
     .player-card .note{
-      margin-top:auto;
-      background:#f8fafc;
-      border:1px solid #e5e7eb;
-      border-radius:12px;
-      padding:10px 12px;
-      font-size:.92rem;
-      line-height:1.7;
-      color:#334155;
+      margin-top:auto;background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;
+      padding:10px 12px;font-size:.92rem;line-height:1.7;color:#334155;
     }
     .sidebar-section{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:var(--shadow);
-      margin-bottom:16px;
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-bottom:16px;
     }
     .sidebar-title{margin:0 0 12px;font-size:1.02rem;font-weight:900;}
     .sidebar-list{margin:0;padding-left:1.1rem;}
@@ -259,17 +230,17 @@
       <ul class="breadcrumb-list">
         <li><a href="index.html">ホーム</a></li>
         <li><a href="events.html">イベント</a></li>
-        <li>TS第3弾</li>
+        <li>ドラ1セレクション</li>
       </ul>
     </div>
   </nav>
 
   <section class="page-header">
     <div class="container">
-      <h1 class="page-title">【プロスピA】TS第3弾の当たりランキング2026最新</h1>
+      <h1 class="page-title">【プロスピA】ドラ1セレクションの当たりランキング2026最新</h1>
       <p class="page-subtitle">
-        2026年のTS第3弾は12人構成で、熱闘スタジアムの累計報酬でもSランクTS契約書(第3弾)が狙える状況です。
-        この記事では、リーグ・リアタイ・純正を分けて独自に評価し、引くべきかまで整理します。 
+        2026年のドラ1セレクションは<strong>06/26 15:00〜07/06 12:59</strong>開催で、<strong>30連・60連・90連でSランク確定</strong>です。 
+        実装選手は山田哲人、清原和博、筒香嘉智、岡本和真、城島健司、藤浪晋太郎、陽岱鋼、立浪和義、有藤通世、山﨑福也、片山博視、佐々岡真司の12人です。 
       </p>
     </div>
   </section>
@@ -279,20 +250,20 @@
       <div class="content-wrapper">
         <div class="main-content">
           <section class="section">
-            <h2 class="section-title"><i class="fas fa-info-circle section-title-icon"></i>TS第3弾の見方</h2>
+            <h2 class="section-title"><i class="fas fa-info-circle section-title-icon"></i>ドラ1セレクションの見方</h2>
             <p>
-              2026年度のTS第3弾は、<strong>浅村栄斗、R・マルティネス、有原航平、伊藤智仁、松中信彦、李承燁</strong>などを含む12人構成です。
-              今回は、単純な能力値だけでなく、リアタイでの役割やリーグでの安定感も含めて見るのが大事です。
+              今回のドラ1セレクションは、リアタイでもリーグでも強い<strong>ドラ1級のスター選手</strong>が集まったガチャです。
+              30連・60連・90連でSランク確定なので、狙いの選手がいる人は天井までの計画を立てやすいのが特徴です。
             </p>
             <div class="bubble">
-              <div class="bubble-label">見るポイント</div>
+              <div class="bubble-label">最初に見るところ</div>
               <p>
-                この記事では、<strong>使い道の広さ</strong>と<strong>編成のしやすさ</strong>で並べています。
-                リアタイで強い選手、リーグで安定する選手、純正で刺さる選手を分けて見ます。
+                このページでは、<strong>使い道の広さ</strong>と<strong>編成のしやすさ</strong>で独自に順位を付けています。
+                迷ったら、リアタイで強い選手とリーグで外しにくい選手を先に見てください。
               </p>
             </div>
             <div class="simplesummary">
-              <span class="summary-pill">TS第3弾</span>
+              <span class="summary-pill">ドラ1セレクション</span>
               <span class="summary-pill">独自評価</span>
               <span class="summary-pill">リーグ</span>
               <span class="summary-pill">リアタイ</span>
@@ -315,75 +286,75 @@
                 <tbody>
                   <tr>
                     <td><strong>1位</strong></td>
-                    <td>R・マルティネス</td>
-                    <td>抑え / リアタイ</td>
-                    <td>終盤の安定感が強く、抑えの軸として最も分かりやすい一枚です。</td>
+                    <td>清原和博</td>
+                    <td>リアタイ / 長打</td>
+                    <td>打球の強さが分かりやすく、打線の軸として最優先候補です。</td>
                   </tr>
                   <tr>
                     <td><strong>2位</strong></td>
-                    <td>浅村栄斗</td>
-                    <td>二塁手 / 打撃</td>
-                    <td>打撃と守備のバランスがよく、内野の主力として外しにくいです。</td>
+                    <td>藤浪晋太郎</td>
+                    <td>先発 / リアタイ</td>
+                    <td>リアタイでの使い分けが強く、投手補強の目玉になりやすいです。</td>
                   </tr>
                   <tr>
                     <td><strong>3位</strong></td>
-                    <td>有原航平</td>
-                    <td>先発 / リーグ</td>
-                    <td>先発の柱として置きやすく、リーグ寄りで評価しやすいです。</td>
+                    <td>岡本和真</td>
+                    <td>三塁手 / 打撃</td>
+                    <td>打撃の安定感が高く、純正でもリーグでも外しにくいです。</td>
                   </tr>
                   <tr>
                     <td><strong>4位</strong></td>
-                    <td>伊藤智仁</td>
-                    <td>先発 / リアタイ</td>
-                    <td>変化球の使い分けがしやすく、リアタイで役割を持たせやすいです。</td>
+                    <td>山田哲人</td>
+                    <td>二塁手 / 打撃</td>
+                    <td>内野の主力として使いやすく、打撃面の厚みが出ます。</td>
                   </tr>
                   <tr>
                     <td><strong>5位</strong></td>
-                    <td>松中信彦</td>
-                    <td>打撃 / 長打</td>
-                    <td>長打力の分かりやすさが魅力で、打線の一発要員として見やすいです。</td>
+                    <td>城島健司</td>
+                    <td>捕手 / 打撃</td>
+                    <td>捕手で打てる価値が高く、純正でも使いやすい一枚です。</td>
                   </tr>
                   <tr>
                     <td><strong>6位</strong></td>
-                    <td>李承燁</td>
-                    <td>DH / 長打</td>
-                    <td>純正やDH運用で強く、打撃を厚くしたい人に向いています。</td>
+                    <td>筒香嘉智</td>
+                    <td>外野 / 長打</td>
+                    <td>長打寄りの外野手として分かりやすく、DH運用にも向いています。</td>
                   </tr>
                   <tr>
                     <td><strong>7位</strong></td>
-                    <td>青柳晃洋</td>
-                    <td>先発 / 変化球</td>
-                    <td>球の見せ方が独特で、先発の幅を広げたいときに候補になります。</td>
+                    <td>立浪和義</td>
+                    <td>内野 / バランス</td>
+                    <td>内野の穴埋め役として扱いやすく、純正での価値もあります。</td>
                   </tr>
                   <tr>
                     <td><strong>8位</strong></td>
-                    <td>鈴木尚典</td>
-                    <td>外野 / 打撃</td>
-                    <td>外野の打力補強として使いやすく、純正での価値もあります。</td>
+                    <td>有藤通世</td>
+                    <td>三塁 / 長打</td>
+                    <td>打撃寄りの内野枠として、編成の幅を広げやすいです。</td>
                   </tr>
                   <tr>
                     <td><strong>9位</strong></td>
-                    <td>中村奨吾</td>
-                    <td>内野 / バランス</td>
-                    <td>内野のバランス役としてまとまりがあり、穴埋めに向いています。</td>
+                    <td>山﨑福也</td>
+                    <td>先発 / 安定</td>
+                    <td>先発の頭数を増やしたいときに役立ちやすいです。</td>
                   </tr>
                   <tr>
                     <td><strong>10位</strong></td>
-                    <td>伊藤光</td>
-                    <td>捕手 / 守備</td>
-                    <td>捕手の枚数が足りないときに候補になる、実用寄りの一枚です。</td>
+                    <td>佐々岡真司</td>
+                    <td>先発 / 変化球</td>
+                    <td>変化球の組み立てで役割を持たせやすいタイプです。</td>
                   </tr>
                   <tr>
                     <td><strong>11位</strong></td>
-                    <td>赤松真人</td>
+                    <td>陽岱鋼</td>
                     <td>外野 / 守備機動</td>
-                    <td>守備や機動力を補いたいときに役割を持たせやすいです。</td>
+                    <td>守備や機動力を補いたいときに候補になります。</td>
                   </tr>
                   <tr>
                     <td><strong>12位</strong></td>
-                    <td>田中和基</td>
-                    <td>外野 / 将来性</td>
-                    <td>手持ち次第では使い道がありますが、上位の即戦力組よりは優先度が下がります。</td>
+                    <td>片山博視</td>
+                    <td>投手 / 補強枠</td>
+                    <td>手持ち次第で候補になる、実用寄りの一枚です。</td>
                   </tr>
                 </tbody>
               </table>
@@ -396,73 +367,73 @@
               <div class="player-card">
                 <div class="head">
                   <div>
-                    <div class="name">R・マルティネス</div>
-                    <div class="team">TS第3弾</div>
+                    <div class="name">清原和博</div>
+                    <div class="team">ドラ1セレクション</div>
                   </div>
                   <span class="role">最優先候補</span>
                 </div>
-                <div class="statline">抑え / リアタイ</div>
-                <div class="note">終盤運用の安心感が大きく、1枚で役割を持たせやすいタイプです。</div>
+                <div class="statline">打撃 / 長打</div>
+                <div class="note">打球の強さが分かりやすく、1枚で役割を持たせやすいタイプです。</div>
               </div>
 
               <div class="player-card">
                 <div class="head">
                   <div>
-                    <div class="name">浅村栄斗</div>
-                    <div class="team">TS第3弾</div>
+                    <div class="name">藤浪晋太郎</div>
+                    <div class="team">ドラ1セレクション</div>
+                  </div>
+                  <span class="role">リアタイ軸</span>
+                </div>
+                <div class="statline">先発 / 投手</div>
+                <div class="note">リアタイでの投球パターンが強く、投手補強の目玉になりやすいです。</div>
+              </div>
+
+              <div class="player-card">
+                <div class="head">
+                  <div>
+                    <div class="name">岡本和真</div>
+                    <div class="team">ドラ1セレクション</div>
                   </div>
                   <span class="role">打撃型</span>
                 </div>
+                <div class="statline">三塁手 / 打撃</div>
+                <div class="note">三塁の主力として使いやすく、純正でもリーグでも外しにくいです。</div>
+              </div>
+
+              <div class="player-card">
+                <div class="head">
+                  <div>
+                    <div class="name">山田哲人</div>
+                    <div class="team">ドラ1セレクション</div>
+                  </div>
+                  <span class="role">内野主力</span>
+                </div>
                 <div class="statline">二塁手 / 打撃</div>
-                <div class="note">打撃と守備のバランスがよく、内野の主力として扱いやすいです。</div>
+                <div class="note">内野の主力としてまとまりがあり、編成に入れやすいです。</div>
               </div>
 
               <div class="player-card">
                 <div class="head">
                   <div>
-                    <div class="name">有原航平</div>
-                    <div class="team">TS第3弾</div>
+                    <div class="name">城島健司</div>
+                    <div class="team">ドラ1セレクション</div>
                   </div>
-                  <span class="role">先発軸</span>
+                  <span class="role">捕手候補</span>
                 </div>
-                <div class="statline">先発 / リーグ</div>
-                <div class="note">先発の柱として置きやすく、リーグ寄りで評価しやすいです。</div>
+                <div class="statline">捕手 / 打撃</div>
+                <div class="note">捕手で打てる価値が高く、純正でも扱いやすいです。</div>
               </div>
 
               <div class="player-card">
                 <div class="head">
                   <div>
-                    <div class="name">伊藤智仁</div>
-                    <div class="team">TS第3弾</div>
+                    <div class="name">筒香嘉智</div>
+                    <div class="team">ドラ1セレクション</div>
                   </div>
-                  <span class="role">変化球型</span>
+                  <span class="role">長打型外野</span>
                 </div>
-                <div class="statline">先発 / リアタイ</div>
-                <div class="note">変化球の組み立てがしやすく、リアタイで役割を持たせやすいです。</div>
-              </div>
-
-              <div class="player-card">
-                <div class="head">
-                  <div>
-                    <div class="name">松中信彦</div>
-                    <div class="team">TS第3弾</div>
-                  </div>
-                  <span class="role">長打型</span>
-                </div>
-                <div class="statline">打撃 / 長打</div>
-                <div class="note">一発の分かりやすさがあり、打線の軸を強くしたい人向けです。</div>
-              </div>
-
-              <div class="player-card">
-                <div class="head">
-                  <div>
-                    <div class="name">李承燁</div>
-                    <div class="team">TS第3弾</div>
-                  </div>
-                  <span class="role">DH候補</span>
-                </div>
-                <div class="statline">DH / 長打</div>
-                <div class="note">DH運用との相性がよく、純正でも打撃枠として使いやすいです。</div>
+                <div class="statline">外野手 / 長打</div>
+                <div class="note">DH運用もしやすく、打撃重視の編成に向いています。</div>
               </div>
             </div>
           </section>
@@ -472,22 +443,22 @@
             <div class="bubble">
               <div class="bubble-label">リーグ重視</div>
               <p>
-                R・マルティネス、有原航平、浅村栄斗は、並べやすさと役割の分かりやすさで優先しやすいです。
-                先発と抑えを先に固めたい人ほど相性がいいです。
+                山田哲人、岡本和真、城島健司は、並べやすさと役割の分かりやすさで優先しやすいです。
+                先に内野と捕手を固めたい人と相性がいいです。
               </p>
             </div>
             <div class="bubble bubble-note">
               <div class="bubble-label">リアタイ重視</div>
               <p>
-                R・マルティネス、浅村栄斗、伊藤智仁が分かりやすい上位候補です。
-                迷ったら、まず終盤で使える選手と内野の主力から見ていくと整理しやすいです。
+                清原和博、藤浪晋太郎、筒香嘉智が分かりやすい上位候補です。
+                迷ったら、まず終盤で使える選手と長打役から見ていくと整理しやすいです。
               </p>
             </div>
             <div class="bubble bubble-warn">
               <div class="bubble-label">注意</div>
               <p>
                 このページの順位は独自評価です。
-                今回は役割のはっきりした選手を上に置いているので、純正や手持ちによって順番を入れ替えても問題ありません。
+                役割のはっきりした選手を上に置いているので、純正や手持ちによって順番を入れ替えても問題ありません。
               </p>
             </div>
           </section>
@@ -495,21 +466,21 @@
           <section class="section">
             <h2 class="section-title"><i class="fas fa-question-circle section-title-icon"></i>よくある質問（FAQ）</h2>
             <details>
-              <summary>TS第3弾は誰が当たり？</summary>
+              <summary>ドラ1セレクションは誰が当たり？</summary>
               <p>
-                リアタイの安定感で見るならR・マルティネス、内野の強化なら浅村栄斗、先発の補強なら有原航平が分かりやすいです。
+                リアタイの安定感で見るなら清原和博と藤浪晋太郎、内野の強化なら山田哲人と岡本和真、捕手補強なら城島健司が分かりやすいです。
+              </p>
+            </details>
+            <details>
+              <summary>30・60・90連のSランク確定はある？</summary>
+              <p>
+                あります。ドラ1セレクションは30連、60連、90連でSランク確定です。
               </p>
             </details>
             <details>
               <summary>純正でも狙う価値はある？</summary>
               <p>
-                あります。TS第3弾は純正との相性がよく、チーム補強の軸にしやすい選手が多いです。
-              </p>
-            </details>
-            <details>
-              <summary>ログイン特典はある？</summary>
-              <p>
-                期間中はSランク エキサイティングプレイヤー契約書(第1弾)のような別イベント報酬ではなく、TS第3弾は熱闘スタジアムの累計報酬でTS契約書(第3弾)を狙う形です。
+                あります。ドラ1セレクションは純正との相性がよく、チーム補強の軸にしやすい選手が多いです。
               </p>
             </details>
           </section>
@@ -528,11 +499,11 @@
           <div class="sidebar-section">
             <h3 class="sidebar-title">注目キーワード</h3>
             <div class="tag-row">
-              <span class="tag">#TS第3弾</span>
-              <span class="tag">#浅村栄斗</span>
-              <span class="tag">#Rマルティネス</span>
-              <span class="tag">#有原航平</span>
-              <span class="tag">#伊藤智仁</span>
+              <span class="tag">#ドラ1セレクション</span>
+              <span class="tag">#清原和博</span>
+              <span class="tag">#藤浪晋太郎</span>
+              <span class="tag">#岡本和真</span>
+              <span class="tag">#山田哲人</span>
             </div>
           </div>
         </aside>
